@@ -6,3 +6,17 @@
 * {
 	font-family: "hel";
 }
+
+.carousel-indicators button {
+	height: 5px !important;
+}
+
+.carousel-indicators button.active {
+	background-color: black !important;
+}
+
+.navbar {
+	background-color: transparent !important;
+	font-size: 12px;
+	
+}
