@@ -7,6 +7,10 @@
 	font-family: "hel";
 }
 
+section {
+	margin-bottom: 160px !important;
+}
+
 .carousel-indicators button {
 	height: 5px !important;
 }
@@ -18,5 +22,41 @@
 .navbar {
 	background-color: transparent !important;
 	font-size: 12px;
-	
+}
+
+.img-thumbnail {
+	border: 0px;
+}
+
+.product-title {
+	font-size: 38px;
+	font-weight: 500;
+	letter-spacing: -3px;
+	word-spacing: 5px;
+	color: black;
+	padding: 0 220px;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+	.container,
+	.container-lg,
+	.container-md,
+	.container-sm,
+	.container-xl,
+	.container-xxl {
+		max-width: 1500px;
+	}
 }

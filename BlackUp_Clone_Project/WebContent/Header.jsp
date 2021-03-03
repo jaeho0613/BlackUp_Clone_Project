@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top m-2">
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top m-3">
     <div class="container-fluid">
         <!-- BlackUp Log -->
         <a class="navbar-brand" href="/BlackUp_Clone_Project/MainForm.jsp">
