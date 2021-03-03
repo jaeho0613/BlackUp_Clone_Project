@@ -14,8 +14,6 @@ local.properties
 .settings/
 .loadpath
 .recommenders
-Server/
-Server1/
 Servers/
 
 # External tool builders
