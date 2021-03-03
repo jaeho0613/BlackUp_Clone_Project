@@ -82,19 +82,15 @@ pageEncoding="UTF-8"%>
                 <ul class="navbar-nav mb-2 mb-lg-0">
                     <!-- Signin -->
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">SIGNIN</a>
+                        <a class="nav-link active" aria-current="page" href="#">LOGIN</a>
                     </li>
                     <!-- SigUp -->
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">SIGNUP</a>
+                        <a class="nav-link active" aria-current="page" href="auth/join.jsp">JOIN</a>
                     </li>
                     <!-- SigOut -->
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">SIGNOUT</a>
-                    </li>
-                    <!-- Cart -->
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">CART</a>
                     </li>
                     <!-- Account -->
                     <li class="nav-item dropdown">
