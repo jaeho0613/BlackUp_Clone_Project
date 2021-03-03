@@ -15,9 +15,9 @@
 
 <body>
   <!-- 헤드 부분 -->
-  <jsp:include page="Header.jsp"></jsp:include>
+  <jsp:include page="./Header.jsp"></jsp:include>
   
   <!-- 푸터 부분 -->
-  <jsp:include page="Footer.jsp"></jsp:include>
+  <jsp:include page="./Footer.jsp"></jsp:include>
 </body>
 </html>

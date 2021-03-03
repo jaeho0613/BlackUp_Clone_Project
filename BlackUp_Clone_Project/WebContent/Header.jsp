@@ -5,8 +5,8 @@ pageEncoding="UTF-8"%>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <!-- BlackUp Log -->
-            <a class="navbar-brand" href="#">
-                <img src="./img/main_logo.png" alt="#">
+            <a class="navbar-brand" href="/BlackUp_Clone_Project/MainForm.jsp">
+                <img src="https://black-up.kr/web/upload/yangji_pc_crumb/main_logo.png" alt="#">
             </a>
             <!-- Toggler button-->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -82,11 +82,13 @@ pageEncoding="UTF-8"%>
                 <ul class="navbar-nav mb-2 mb-lg-0">
                     <!-- Signin -->
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">LOGIN</a>
+                        <a class="nav-link active" aria-current="page"
+                            href="/BlackUp_Clone_Project/jsp/auth/login.jsp">LOGIN</a>
                     </li>
                     <!-- SigUp -->
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="auth/join.jsp">JOIN</a>
+                        <a class="nav-link active" aria-current="page"
+                            href="/BlackUp_Clone_Project/jsp/auth/join.jsp">JOIN</a>
                     </li>
                     <!-- SigOut -->
                     <li class="nav-item">
