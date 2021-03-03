@@ -1,0 +1,8 @@
+@font-face {
+	src: url("../font/Howvetica-Aayp.ttf");
+	font-family: "hel";
+}
+
+* {
+	font-family: "hel";
+}
