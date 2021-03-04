@@ -109,102 +109,167 @@
 
   <!-- 오늘의 새로운 아이템 섹션 -->
   <section class="container" id="new_item">
-  <h2 class="product-title text-start">Today`s new item</h2>
-    <!-- 그룹 1 -->
-    <div class="card-group row-cols-1 row-cols-md-2 g-4">
-      <div class="card border-0">
-        <img src="https://black-up.kr/web/product/medium/202103/f14b5f4bab347cbf0173757dfd77be0e.webp"
-          class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title text-center">[MADE] 메이킹 베이직 니트</h5>
-          <p class="card-text text-center">22,800 won (1,200 won 할인)</p>
-        </div>
-      </div>
-      <div class="card border-0">
-        <img src="https://black-up.kr/web/product/medium/202103/020cdafa2bd9eebf4023a8d18c14243a.webp"
-          class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-        </div>
-      </div>
-      <div class="card border-0">
-        <img src="https://black-up.kr/web/product/medium/202103/4e809b73e1a17205857594ad1c586d91.webp"
-          class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-            content. This card has even longer content than the first to show that equal height action.</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-        </div>
-      </div>
-    </div>
-    <!-- 그룹 2 -->
+    <h2 class="product-title text-start">Today's new item</h2>
+
+    <!-- 그룹 -->
     <div class="card-group">
+      <!-- 의상 -->
       <div class="card border-0">
-        <img src="https://black-up.kr/web/product/medium/202103/f14b5f4bab347cbf0173757dfd77be0e.webp"
+        <img src="https://black-up.kr/web/product/medium/202102/60baee2261e478ec5bf72609fbf05243.webp"
           class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-            content. This content is a little bit longer.</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          <!-- 상품 정보 -->
+          <p class="text-center">[MADE] 메이킹 베이직 니트</p>
+          <p class="text-center">22,800 won (1,200 won 할인)</p>
+          <!-- 컬러 셋 -->
+          <div class="colors d-flex align-items-center justify-content-center mt-1">
+            <span class="border border-dark" style="background-color: #4BAB6D;"></span>
+            <span class="border border-dark" style="background-color: #A9A9A9;"></span>
+            <span class="border border-dark" style="background-color: #000000;"></span>
+          </div>
         </div>
       </div>
+      <!-- 의상 -->
       <div class="card border-0">
-        <img src="https://black-up.kr/web/product/medium/202103/020cdafa2bd9eebf4023a8d18c14243a.webp"
+        <img src="https://black-up.kr/web/product/medium/202103/917205722b5ae79ae5c916f98e7d3e26.webp"
           class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          <!-- 상품 정보 -->
+          <p class="text-center">[MADE] 리처 와이드 코튼팬츠</p>
+          <p class="text-center">26,600 won (1,400 won 할인)</p>
+          <!-- 컬러 셋 -->
+          <div class="colors d-flex align-items-center justify-content-center mt-1">
+            <span class="border border-dark" style="background-color: #FEFFEF;"></span>
+            <span class="border border-dark" style="background-color: #C4BDB0;"></span>
+            <span class="border border-dark" style="background-color: #ADA48A;"></span>
+            <span class="border border-dark" style="background-color: #474C70;"></span>
+            <span class="border border-dark" style="background-color: #000000;"></span>
+          </div>
         </div>
       </div>
+      <!-- 의상 -->
       <div class="card border-0">
-        <img src="https://black-up.kr/web/product/medium/202103/4e809b73e1a17205857594ad1c586d91.webp"
+        <img src="https://black-up.kr/web/product/medium/202102/d866bd8bb90b3f9b5a193acd0114c718.webp"
           class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-            content. This card has even longer content than the first to show that equal height action.</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          <!-- 상품 정보 -->
+          <p class="text-center">[MADE] 리아빅 라운드 티셔츠</p>
+          <p class="text-center">15,200 won (800 won 할인)</p>
+          <!-- 컬러 셋 -->
+          <div class="colors d-flex align-items-center justify-content-center mt-1">
+            <span class="border border-dark" style="background-color: #007543;"></span>
+            <span class="border border-dark" style="background-color: #0000FD;"></span>
+            <span class="border border-dark" style="background-color: #000000;"></span>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- 그룹 3 -->
+    <!-- 그룹 -->
     <div class="card-group">
+      <!-- 의상 -->
+      <div class="card border-0">
+        <img src="https://black-up.kr/web/product/medium/202103/c231f5cfecca779307400aea97be961a.webp"
+          class="card-img-top" alt="...">
+        <div class="card-body">
+          <!-- 상품 정보 -->
+          <p class="text-center">[MADE] 리타 블루 스트레이트 데님팬츠</p>
+          <p class="text-center">30,400 won (1,600 won 할인)</p>
+          <!-- 컬러 셋 -->
+          <div class="colors d-flex align-items-center justify-content-center mt-1">
+          </div>
+        </div>
+      </div>
+      <!-- 의상 -->
+      <div class="card border-0">
+        <img src="https://black-up.kr/web/product/medium/202102/2039e316a972d461ba69982333fcd242.jpg"
+          class="card-img-top" alt="...">
+        <div class="card-body">
+          <!-- 상품 정보 -->
+          <p class="text-center">소튼 크롭 워머 후드집업</p>
+          <p class="text-center">27,550 won (1,450 won 할인)</p>
+          <!-- 컬러 셋 -->
+          <div class="colors d-flex align-items-center justify-content-center mt-1">
+            <span class="border border-dark" style="background-color: #FFFFFF;"></span>
+            <span class="border border-dark" style="background-color: #EBDCC5;"></span>
+            <span class="border border-dark" style="background-color: #A9A9A9;"></span>
+            <span class="border border-dark" style="background-color: #000000;"></span>
+          </div>
+        </div>
+      </div>
+      <!-- 의상 -->
+      <div class="card border-0">
+        <img src="https://black-up.kr/web/product/medium/202102/5b212d137950702492d28b20a595dcd8.jpg"
+          class="card-img-top" alt="...">
+        <div class="card-body">
+          <!-- 상품 정보 -->
+          <p class="text-center">덴디 핀턱 슬랙스</p>
+          <p class="text-center">22,800 won (1,200 won 할인)</p>
+          <!-- 컬러 셋 -->
+          <div class="colors d-flex align-items-center justify-content-center mt-1">
+            <span class="border border-dark" style="background-color: #EBE7D6;"></span>
+            <span class="border border-dark" style="background-color: #787878;"></span>
+            <span class="border border-dark" style="background-color: #000000;"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 그룹 -->
+    <div class="card-group">
+      <!-- 의상 -->
+      <div class="card border-0">
+        <img src="https://black-up.kr/web/product/medium/202103/41a102d2583ad33b76613a8ad5ff4f36.webp"
+          class="card-img-top" alt="...">
+        <div class="card-body">
+          <!-- 상품 정보 -->
+          <p class="text-center">(UNISEX) 아넷 오버핏 브이넥니트</p>
+          <p class="text-center">24,700 won (1,300 won 할인)</p>
+          <!-- 컬러 셋 -->
+          <div class="colors d-flex align-items-center justify-content-center mt-1">
+            <span class="border border-dark" style="background-color: #FEFFEF;"></span>
+            <span class="border border-dark" style="background-color: #B0B566;"></span>
+            <span class="border border-dark" style="background-color: #A2BDB6;"></span>
+            <span class="border border-dark" style="background-color: #93A5B8;"></span>
+            <span class="border border-dark" style="background-color: #6E6E6E;"></span>
+            <span class="border border-dark" style="background-color: #000000;"></span>
+          </div>
+        </div>
+      </div>
+      <!-- 의상 -->
       <div class="card border-0">
         <img src="https://black-up.kr/web/product/medium/202103/f14b5f4bab347cbf0173757dfd77be0e.webp"
           class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-            content. This content is a little bit longer.</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          <!-- 상품 정보 -->
+          <p class="text-center">몽느 스티치 조거팬츠</p>
+          <p class="text-center">29,450 won (1,550 won 할인)</p>
+          <!-- 컬러 셋 -->
+          <div class="colors d-flex align-items-center justify-content-center mt-1">
+            <span class="border border-dark" style="background-color: #F5F5F5;"></span>
+            <span class="border border-dark" style="background-color: #C2C2C2;"></span>
+            <span class="border border-dark" style="background-color: #474747;"></span>
+            <span class="border border-dark" style="background-color: #000000;"></span>
+          </div>
         </div>
       </div>
+      <!-- 의상 -->
       <div class="card border-0">
         <img src="https://black-up.kr/web/product/medium/202103/020cdafa2bd9eebf4023a8d18c14243a.webp"
           class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-        </div>
-      </div>
-      <div class="card border-0">
-        <img src="https://black-up.kr/web/product/medium/202103/4e809b73e1a17205857594ad1c586d91.webp"
-          class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-            content. This card has even longer content than the first to show that equal height action.</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          <!-- 상품 정보 -->
+          <p class="text-center">트윙 프린팅 반팔티</p>
+          <p class="text-center">13,300 won (700 won 할인)</p>
+          <!-- 컬러 셋 -->
+          <div class="colors d-flex align-items-center justify-content-center mt-1">
+            <span class="border border-dark" style="background-color: ##FEFFEF;"></span>
+            <span class="border border-dark" style="background-color: #000000;"></span>
+          </div>
         </div>
       </div>
     </div>
+
   </section>
 
   <!-- 푸터 부분 -->
