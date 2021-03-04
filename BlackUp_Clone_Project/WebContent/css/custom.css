@@ -1,3 +1,4 @@
+/* Global Setting */
 @font-face {
 	src: url("../font/Howvetica-Aayp.ttf");
 	font-family: "hel";
@@ -11,6 +12,20 @@ section {
 	margin-bottom: 160px !important;
 }
 
+.product-title {
+	font-size: 38px;
+	font-weight: 500;
+	letter-spacing: -3px;
+	word-spacing: 5px;
+	color: black;
+	padding: 0 2rem;
+}
+
+.card {
+	margin: 2.5rem;
+}
+
+/* Main Slide setting */
 .carousel-indicators button {
 	height: 5px !important;
 }
@@ -24,39 +39,27 @@ section {
 	font-size: 12px;
 }
 
-.img-thumbnail {
-	border: 0px;
+/* Today`s new item Setting */
+.card-body>* {
+	font-family: 'Nanum Gothic';
+	font-size: 12px;
 }
 
-.product-title {
-	font-size: 38px;
-	font-weight: 500;
-	letter-spacing: -3px;
-	word-spacing: 5px;
-	color: black;
-	padding: 0 220px;
+.card-body p {
+	margin: 0;
 }
 
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {}
+span.border {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	margin: 0 1px;
+	width: 12px;
+}
 
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {}
-
-/* X-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {}
-
-/* XX-Large devices (larger desktops, 1400px and up) */
-@media (min-width: 1400px) {
-	.container,
-	.container-lg,
-	.container-md,
-	.container-sm,
-	.container-xl,
-	.container-xxl {
-		max-width: 1500px;
+/* Media Query */
+@media (min-width : 1400px) {
+	.container {
+		max-width: 1550px;
 	}
 }
