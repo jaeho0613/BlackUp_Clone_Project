@@ -8,9 +8,9 @@ pageEncoding="UTF-8"%>
   </head>
   <link rel="stylesheet" href="./css/bootstrap.min.css" />
   <body>
-  <jsp:include page="./Header.jsp"></jsp:include>
+    <jsp:include page="./Header.jsp"></jsp:include>
     <header>
-    <h1 class="nav justify-content-center">MADE</h1>
+      <h1 class="nav justify-content-center">MADE</h1>
     </header>
     <section>
       <div>
