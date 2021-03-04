@@ -81,6 +81,38 @@ pageEncoding="UTF-8"%>
             </div>
           </div>
         </div>
+        
+         <!-- 의상 -->
+        <div class="card border-0">
+          <img
+            src="https://black-up.kr/web/product/medium/202102/60baee2261e478ec5bf72609fbf05243.webp"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <!-- 상품 정보 -->
+            <p class="text-center">[MADE] 메이킹 베이직 니트</p>
+            <p class="text-center">22,800 won (1,200 won 할인)</p>
+            <!-- 컬러 셋 -->
+            <div
+              class="colors d-flex align-items-center justify-content-center mt-1"
+            >
+              <span
+                class="border border-light"
+                style="background-color: #4bab6d"
+              ></span>
+              <span
+                class="border border-light"
+                style="background-color: #a9a9a9"
+              ></span>
+              <span
+                class="border border-light"
+                style="background-color: #000000"
+              ></span>
+            </div>
+          </div>
+        </div>
+        
         <!-- 의상 -->
         <div class="card border-0">
           <img
@@ -153,6 +185,38 @@ pageEncoding="UTF-8"%>
 
       <!-- 그룹 -->
       <div class="card-group">
+      
+       <!-- 의상 -->
+        <div class="card border-0">
+          <img
+            src="https://black-up.kr/web/product/medium/202102/60baee2261e478ec5bf72609fbf05243.webp"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <!-- 상품 정보 -->
+            <p class="text-center">[MADE] 메이킹 베이직 니트</p>
+            <p class="text-center">22,800 won (1,200 won 할인)</p>
+            <!-- 컬러 셋 -->
+            <div
+              class="colors d-flex align-items-center justify-content-center mt-1"
+            >
+              <span
+                class="border border-light"
+                style="background-color: #4bab6d"
+              ></span>
+              <span
+                class="border border-light"
+                style="background-color: #a9a9a9"
+              ></span>
+              <span
+                class="border border-light"
+                style="background-color: #000000"
+              ></span>
+            </div>
+          </div>
+        </div>
+      
         <!-- 의상 -->
         <div class="card border-0">
           <img
@@ -238,6 +302,38 @@ pageEncoding="UTF-8"%>
 
       <!-- 그룹 -->
       <div class="card-group">
+      
+       <!-- 의상 -->
+        <div class="card border-0">
+          <img
+            src="https://black-up.kr/web/product/medium/202102/60baee2261e478ec5bf72609fbf05243.webp"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <!-- 상품 정보 -->
+            <p class="text-center">[MADE] 메이킹 베이직 니트</p>
+            <p class="text-center">22,800 won (1,200 won 할인)</p>
+            <!-- 컬러 셋 -->
+            <div
+              class="colors d-flex align-items-center justify-content-center mt-1"
+            >
+              <span
+                class="border border-light"
+                style="background-color: #4bab6d"
+              ></span>
+              <span
+                class="border border-light"
+                style="background-color: #a9a9a9"
+              ></span>
+              <span
+                class="border border-light"
+                style="background-color: #000000"
+              ></span>
+            </div>
+          </div>
+        </div>
+      
         <!-- 의상 -->
         <div class="card border-0">
           <img
