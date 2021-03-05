@@ -5,61 +5,30 @@
 }
 
 * {
-	font-family: "hel";
+	font-size: 12px;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+li.nav-item,
+h2,
+h6 {
+	font-weight: bold;
+	font-family: 'hel';
 }
 
 section {
 	margin-bottom: 160px !important;
 }
 
-.product-title {
-	font-size: 38px;
-	font-weight: 500;
-	letter-spacing: -3px;
-	word-spacing: 5px;
-	color: black;
-	padding: 0 2rem;
-}
-
 .card {
 	margin: 2.5rem;
-}
-
-/* Main Slide setting */
-.carousel-indicators button {
-	height: 5px !important;
-}
-
-.carousel-indicators button.active {
-	background-color: black !important;
-}
-
-.navbar {
-	background-color: transparent !important;
-	font-size: 12px;
-}
-
-/* Today`s new item Setting */
-.card-body>* {
-	font-family: 'Nanum Gothic';
-	font-size: 12px;
-}
-
-.card-body p {
-	margin: 0;
-}
-
-span.border {
-	display: inline-block;
-	width: 12px;
-	height: 12px;
-	margin: 0 1px;
-	width: 12px;
-}
-
-/* Media Query */
-@media (min-width : 1400px) {
-	.container {
-		max-width: 1550px;
-	}
 }
