@@ -105,26 +105,22 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row" colspan="2" class="text-center table-active">선택</th>
+                                <th scope="row" colspan="2" class="text-center table-active">선택한 목록</th>
                             </tr>
                             <!-- 선택창 -->
                             <tr>
                                 <th scope="row">[MADE] 리타 블루 스트레이트 데님 팬츠</th>
                                 <td class="text-start">
-                                    <div class="d-flex justify-content-end">
-                                        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-                                            <option selected>-[필수] 옵션을 선택해 주세요 -</option>
-                                            <option value="1">차콜</option>
-                                            <option value="2">블랙</option>
-                                            <option value="3">화이트</option>
-                                        </select>
-                                    </div>
+                                    S, 차콜
                                 </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" colspan="2" class="text-center table-active">금액</th>
                             </tr>
                             <tr>
                                 <th scope="row">Total</th>
                                 <td class="text-start">
-                                    29,000 won
+                                    32,000 won
                                 </td>
                             </tr>
                         </tbody>
