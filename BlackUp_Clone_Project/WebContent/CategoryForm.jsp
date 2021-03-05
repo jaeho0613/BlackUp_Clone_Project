@@ -4,7 +4,7 @@ pageEncoding="UTF-8"%>
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Something in here</title>
+    <title>BlackUp_Clone</title>
   </head>
   <link rel="stylesheet" href="./css/bootstrap.min.css" />
   <body>
