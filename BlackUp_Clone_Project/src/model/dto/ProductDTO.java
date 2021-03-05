@@ -1,11 +1,9 @@
-package model;
+package model.dto;
 
 public class ProductDTO {
 	int pdID;
 	int pdPrice;
 	String pdName;
-	String pdSize;
-	String pdColor;
 	int pdGPA5;
 	int pdGPA4;
 	int pdGPA3;
@@ -36,24 +34,6 @@ public class ProductDTO {
 
 	public ProductDTO setPdName(String pdName) {
 		this.pdName = pdName;
-		return this;
-	}
-
-	public String getPdSize() {
-		return pdSize;
-	}
-
-	public ProductDTO setPdSize(String pdSize) {
-		this.pdSize = pdSize;
-		return this;
-	}
-
-	public String getPdColor() {
-		return pdColor;
-	}
-
-	public ProductDTO setPdColor(String pdColor) {
-		this.pdColor = pdColor;
 		return this;
 	}
 
@@ -101,5 +81,4 @@ public class ProductDTO {
 		this.pdGPA1 = pdGPA1;
 		return this;
 	}
-
 }
