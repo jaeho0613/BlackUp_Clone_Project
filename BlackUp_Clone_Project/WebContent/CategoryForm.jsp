@@ -27,23 +27,6 @@ pageEncoding="UTF-8"%>
         </ul>
       </div>
 
-      <ul class="nav justify-content-end">
-        <li class="nav-item">
-          <a class="nav-link" href="#" style="color: #000000">NEW</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" style="color: #000000">BEST</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" style="color: #000000">NAME</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" style="color: #000000">LOW PRICE</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" style="color: #000000">HIGH PRICE</a>
-        </li>
-      </ul>
     </section>
     <!-- 오늘의 새로운 아이템 섹션 -->
     <section class="container" id="new_item">
