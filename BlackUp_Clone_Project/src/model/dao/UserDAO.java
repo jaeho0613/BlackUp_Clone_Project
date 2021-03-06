@@ -103,6 +103,4 @@ public class UserDAO implements Userable {
 		return 0;
 	}
 
-
-
 }
