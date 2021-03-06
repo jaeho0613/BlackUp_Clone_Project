@@ -62,10 +62,10 @@
 			<ul class="navbar-nav mb-2 mb-lg-0">
 				<!-- Signin -->
 				<li class="nav-item"><a class="nav-link active" aria-current="page"
-						href="/BlackUp_Clone_Project/jsp/form/LogInForm.jsp">LOGIN</a></li>
+						href="/BlackUp_Clone_Project/login">LOGIN</a></li>
 				<!-- SigUp -->
 				<li class="nav-item"><a class="nav-link active" aria-current="page"
-						href="/BlackUp_Clone_Project/jsp/form/JoInForm.jsp">JOIN</a></li>
+						href="/BlackUp_Clone_Project/join">JOIN</a></li>
 				<!-- SigOut -->
 				<li class="nav-item"><a class="nav-link active" aria-current="page" href="#">SIGNOUT</a></li>
 				<!-- Account -->
