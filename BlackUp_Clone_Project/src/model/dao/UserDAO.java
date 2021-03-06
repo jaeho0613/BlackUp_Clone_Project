@@ -92,8 +92,41 @@ public class UserDAO implements Userable {
 // 유저 데이터 삭제 
 	@Override
 	public int delete(String userID) throws Exception {
+		Connection conn = null;
+		PreparedStatement stmt = null;
 		
-		return 0;
+		try {
+			conn = ds.getConnection();
+			stmt = conn.prepareStatement("delete from user where userID = ?");
+			stmt.setString(1, userID);
+			
+			return stmt.executeUpdate();
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		finally {
+			
+			try {
+				if (stmt != null) {
+					stmt.close();
+				}
+			} catch (Exception e2) {
+
+			}
+			try {
+				if (conn != null) {
+					conn.close();
+				}
+			} catch (Exception e2) {
+
+			}
+		}
+		
+		
+		return -1;
 	}
 
 	// 유저 데이터 업로드 
