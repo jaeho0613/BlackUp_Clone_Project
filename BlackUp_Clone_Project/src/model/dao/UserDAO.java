@@ -90,6 +90,4 @@ public class UserDAO implements Userable {
 		return -1; // 실패하면 -1반환
 	}
 
-
-
 }

@@ -76,8 +76,3 @@ insert into sizeset values(8,'M');
 insert into sizeset values(8,'L');
 insert into category values(8,'made','하의');
 insert into imagepath values(8,'https://black-up.kr/web/product/big/202103/54781434854cb2d50b8d27081f9bd61c.jpg','아무거나(아직사용X)');
-
-select *
-from product join colorset on product.pdID = colorset.pdID
-			 join sizeset on product.pdID = sizeset.pdID
-             join category on product.pdID = category.pdID;

@@ -1,6 +1,7 @@
 package model.dto;
 
 public class ProductDTO {
+
 	int pdID;
 	int pdPrice;
 	String pdName;
@@ -9,6 +10,47 @@ public class ProductDTO {
 	int pdGPA3;
 	int pdGPA2;
 	int pdGPA1;
+
+	ColorSetDTO colorSet;
+	ImagePathDTO imagePath;
+	CategoryDTO category;
+	SizeSetDTO sizeSet;
+
+	public ColorSetDTO getColorSet() {
+		return colorSet;
+	}
+
+	public ProductDTO setColorSet(ColorSetDTO colorSet) {
+		this.colorSet = colorSet;
+		return this;
+	}
+
+	public ImagePathDTO getImagePath() {
+		return imagePath;
+	}
+
+	public ProductDTO setImagePath(ImagePathDTO imagePath) {
+		this.imagePath = imagePath;
+		return this;
+	}
+
+	public CategoryDTO getCategory() {
+		return category;
+	}
+
+	public ProductDTO setCategory(CategoryDTO category) {
+		this.category = category;
+		return this;
+	}
+
+	public SizeSetDTO getSizeSet() {
+		return sizeSet;
+	}
+
+	public ProductDTO setSizeSet(SizeSetDTO sizeSet) {
+		this.sizeSet = sizeSet;
+		return this;
+	}
 
 	public int getPdID() {
 		return pdID;
