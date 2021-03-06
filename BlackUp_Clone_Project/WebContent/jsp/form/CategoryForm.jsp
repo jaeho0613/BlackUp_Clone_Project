@@ -54,8 +54,8 @@
 					<p class="text-center">22,800 won (1,200 won 할인)</p>
 					<!-- 컬러 셋 -->
 					<div class="colors d-flex align-items-center justify-content-center mt-1">
-						<span class="border border-light" style="background-color: #4bab6d"></span> <span
-							class="border border-light" style="background-color: #a9a9a9"></span>
+						<span class="border border-light" style="background-color: #4bab6d"></span> 
+						<span	class="border border-light" style="background-color: #a9a9a9"></span>
 						<span class="border border-light" style="background-color: #000000"></span>
 					</div>
 				</div>

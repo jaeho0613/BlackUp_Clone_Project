@@ -5,6 +5,17 @@ from product join colorset on product.pdID = colorset.pdID
              join category on product.pdID = category.pdID
              join imagepath on product.pdID = imagepath.pdID;
              
+-- 특정 카테고리 상품 가져오기
+select pdID, pdPrice, pdName
+from product
+where product.pdID in (select pdID
+from category
+where cgName = 'made'
+);
+
+-- pdID로 각 테이블 검사
+select * from colorset where pdID like ( select pdID from product where pdID like 1 );
+  
 -- product 
 select *
 from product;

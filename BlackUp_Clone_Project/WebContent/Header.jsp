@@ -24,9 +24,9 @@
 						data-bs-toggle="dropdown" aria-expanded="false">MADE
 					</a>
 					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<li><a class="dropdown-item" href="/BlackUp_Clone_Project/jsp/form/CategoryForm.jsp">상의</a></li>
-						<li><a class="dropdown-item" href="/BlackUp_Clone_Project/jsp/form/CategoryForm.jsp">하의</a></li>
-						<li><a class="dropdown-item" href="/BlackUp_Clone_Project/jsp/form/CategoryForm.jsp">기타</a></li>
+						<li><a class="dropdown-item" href="/BlackUp_Clone_Project/category?name=made&top">상의</a></li>
+						<li><a class="dropdown-item" href="/BlackUp_Clone_Project/category?name=made&bottom">하의</a></li>
+						<li><a class="dropdown-item" href="/BlackUp_Clone_Project/category??name=made&etc">기타</a></li>
 					</ul>
 				</li>
 				<!-- OUTER -->

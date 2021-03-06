@@ -1,13 +1,22 @@
 package servlet;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import model.dao.ProductDAO;
+import model.dto.CategoryDTO;
+import model.dto.ColorSetDTO;
+import model.dto.ImagePathDTO;
+import model.dto.ProductDTO;
+import model.dto.SizeSetDTO;
 
 @SuppressWarnings("serial")
 @WebServlet("/category")
@@ -15,12 +24,69 @@ public class CategoryServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
-		resp.setContentType("text/html; charset=utf-8");
-		RequestDispatcher rd = req.getRequestDispatcher("/jsp/form/CategoryForm.jsp");
-		rd.include(req, resp);
+
+		try {
+
+			// DataSource를 가져오기 위해 ServletContext 변수 생성
+			ServletContext sc = this.getServletContext();
+
+			// ContextLoaderListener에서 생성한 DAO 가져오기
+			ProductDAO productDAO = (ProductDAO) sc.getAttribute("productDAO");
+			ArrayList<ProductDTO> productList = productDAO.getCategoryByProduct(req.getParameter("name"));
+
+			for (ProductDTO productDTO : productList) {
+				System.out.println();
+				System.out.println("-------------------------------------");
+				System.out.println("------------product------------------");
+				System.out.println("pdID : " + productDTO.getPdID());
+				System.out.println("pdPrice : " + productDTO.getPdPrice());
+				System.out.println("pdName : " + productDTO.getPdName());
+				System.out.println("pdGPA1 : " + productDTO.getPdGPA1());
+				System.out.println("pdGPA2 : " + productDTO.getPdGPA2());
+				System.out.println("pdGPA3 : " + productDTO.getPdGPA3());
+				System.out.println("pdGPA4 : " + productDTO.getPdGPA4());
+				System.out.println("pdGPA5 : " + productDTO.getPdGPA5());
+				System.out.println("-------------------------------------");
+				System.out.println("------------colorSet------------------");
+				for (ColorSetDTO colorSet : productDTO.getColorSetList()) {
+					System.out.println("pdID : " + colorSet.getPdID());
+					System.out.println("color : " + colorSet.getColor());
+				}
+				System.out.println("-------------------------------------");
+				System.out.println("------------imagepath------------------");
+				for (ImagePathDTO imagePath : productDTO.getImagePathList()) {
+					System.out.println("pdID : " + imagePath.getPdID());
+					System.out.println("imagePath : " + imagePath.getImgName());
+					System.out.println("imageName : " + imagePath.getImgPath());
+				}
+				System.out.println("-------------------------------------");
+				System.out.println("------------category------------------");
+				for (CategoryDTO category : productDTO.getCategoryList()) {
+					System.out.println("pdID : " + category.getPdID());
+					System.out.println("cgType : " + category.getCgType());
+					System.out.println("cgName : " + category.getCgName());
+				}
+				System.out.println("-------------------------------------");
+				System.out.println("------------sizeSet------------------");
+				for (SizeSetDTO sizeSet : productDTO.getSizeSetList()) {
+					System.out.println("pdID : " + sizeSet.getPdID());
+					System.out.println("size : " + sizeSet.getSize());
+				}
+				System.out.println("-------------------------------------");
+				System.out.println();
+			}
+
+			req.setAttribute("productList", productList);
+
+			resp.setContentType("text/html; charset=utf-8");
+			RequestDispatcher rd = req.getRequestDispatcher("/jsp/form/CategoryForm.jsp");
+			rd.include(req, resp);
+
+		} catch (Exception e) {
+
+		}
 	}
-	
+
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub

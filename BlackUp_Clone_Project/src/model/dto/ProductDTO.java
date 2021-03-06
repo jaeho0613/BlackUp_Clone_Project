@@ -1,5 +1,7 @@
 package model.dto;
 
+import java.util.ArrayList;
+
 public class ProductDTO {
 
 	int pdID;
@@ -11,44 +13,44 @@ public class ProductDTO {
 	int pdGPA2;
 	int pdGPA1;
 
-	ColorSetDTO colorSet;
-	ImagePathDTO imagePath;
-	CategoryDTO category;
-	SizeSetDTO sizeSet;
+	ArrayList<ColorSetDTO> colorSetList;
+	ArrayList<ImagePathDTO> imagePathList;
+	ArrayList<CategoryDTO> categoryList;
+	ArrayList<SizeSetDTO> sizeSetList;
 
-	public ColorSetDTO getColorSet() {
-		return colorSet;
+	public ArrayList<ColorSetDTO> getColorSetList() {
+		return colorSetList;
 	}
 
-	public ProductDTO setColorSet(ColorSetDTO colorSet) {
-		this.colorSet = colorSet;
+	public ProductDTO setColorSetList(ArrayList<ColorSetDTO> colorSetList) {
+		this.colorSetList = colorSetList;
 		return this;
 	}
 
-	public ImagePathDTO getImagePath() {
-		return imagePath;
+	public ArrayList<ImagePathDTO> getImagePathList() {
+		return imagePathList;
 	}
 
-	public ProductDTO setImagePath(ImagePathDTO imagePath) {
-		this.imagePath = imagePath;
+	public ProductDTO setImagePathList(ArrayList<ImagePathDTO> imagePathList) {
+		this.imagePathList = imagePathList;
 		return this;
 	}
 
-	public CategoryDTO getCategory() {
-		return category;
+	public ArrayList<CategoryDTO> getCategoryList() {
+		return categoryList;
 	}
 
-	public ProductDTO setCategory(CategoryDTO category) {
-		this.category = category;
+	public ProductDTO setCategoryList(ArrayList<CategoryDTO> categoryList) {
+		this.categoryList = categoryList;
 		return this;
 	}
 
-	public SizeSetDTO getSizeSet() {
-		return sizeSet;
+	public ArrayList<SizeSetDTO> getSizeSetList() {
+		return sizeSetList;
 	}
 
-	public ProductDTO setSizeSet(SizeSetDTO sizeSet) {
-		this.sizeSet = sizeSet;
+	public ProductDTO setSizeSetList(ArrayList<SizeSetDTO> sizeSetList) {
+		this.sizeSetList = sizeSetList;
 		return this;
 	}
 

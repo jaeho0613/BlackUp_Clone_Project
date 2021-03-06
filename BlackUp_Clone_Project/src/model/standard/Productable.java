@@ -1,5 +1,6 @@
 package model.standard;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import model.dto.CategoryDTO;
@@ -11,7 +12,10 @@ import model.dto.SizeSetDTO;
 public interface Productable {
 
 	// 상품 전체 가져오기
-	List<ProductDTO> productList() throws Exception;
+	ArrayList<ProductDTO> getProductList() throws Exception;
+	
+	// 카테고리별 상품 정보 가져오기
+	ArrayList<ProductDTO> getCategoryByProduct(String cgName) throws Exception;
 	
 	// 상품 정보 가져오기 - pdID
 	int getProductID(String pdName) throws Exception;
