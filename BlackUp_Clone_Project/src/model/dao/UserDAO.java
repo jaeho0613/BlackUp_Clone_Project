@@ -89,6 +89,19 @@ public class UserDAO implements Userable {
 		
 		return -1; // 실패하면 -1반환
 	}
+// 유저 데이터 삭제 
+	@Override
+	public int delete(String userID) throws Exception {
+		
+		return 0;
+	}
+
+	// 유저 데이터 업로드 
+	@Override
+	public int update(UserDTO userDTO) throws Exception {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 
 
 
