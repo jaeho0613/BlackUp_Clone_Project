@@ -131,9 +131,67 @@ public class UserDAO implements Userable {
 
 	// 유저 데이터 업로드 
 	@Override
-	public int update(UserDTO userDTO) throws Exception {
-		// TODO Auto-generated method stub
-		return 0;
+	public UserDTO update(UserDTO userDTO) throws Exception {
+		Connection conn = null;
+		PreparedStatement stmt = null;
+		ResultSet rs = null;
+		
+		
+		
+		try {
+			conn = ds.getConnection();
+			stmt = conn.prepareStatement("update user set userRating = ?, userPassword = ?, userPasswordHash = ?, userName = ?, \n"
+					+ "				userAddress = ?, userPhone = ?, userSex = ? \n"
+					+ "where userID = ?");
+			
+			rs = stmt.executeQuery();
+			rs.next();
+			
+			UserDTO user = new UserDTO()
+					.setUserAddress(rs.getString("userAddress"))
+					.setUserID(rs.getString("userID"))
+					.setUserName(rs.getString("userName"))
+					.setUserPassword(rs.getString("userPassword"))
+					.setUserPasswordHash(rs.getString("userPasswordHash"))
+					.setUserPhone(rs.getString("userPhone"))
+					.setUserRating(rs.getInt("userRating"))
+					.setUserSex(rs.getString("userSex"));
+					
+			return user;
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			
+			try {
+				if (rs != null) {
+					rs.close();
+				}
+			} catch (Exception e2) {
+
+			}
+			try {
+				if (stmt != null) {
+					stmt.close();
+				}
+			} catch (Exception e2) {
+
+			}
+			try {
+				if (conn != null) {
+					conn.close();
+				}
+			} catch (Exception e2) {
+
+			}
+		}
+		
+		
+		
+		
+		
+		return null;
 	}
 
 }
