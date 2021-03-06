@@ -8,15 +8,15 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width initial-scale=1">
     <!-- JS -->
-    <script src="../../js/bootstrap.min.js"></script>
-    <script src="../../js/jquery-3.5.1.min.js"></script>
-    <script src="../../js/popper.min.js"></script>
+    <script src="/BlackUp_Clone_Project/js/bootstrap.min.js"></script>
+    <script src="/BlackUp_Clone_Project/js/jquery-3.5.1.min.js"></script>
+    <script src="/BlackUp_Clone_Project/js/popper.min.js"></script>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../css/custom.css">
+    <link rel="stylesheet" href="/BlackUp_Clone_Project/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/BlackUp_Clone_Project/css/custom.css">
 
-    <link rel="stylesheet" href="../../css/product.css">
+    <link rel="stylesheet" href="/BlackUp_Clone_Project/css/product.css">
 
     <title>ProductForm</title>
 </head>
@@ -47,7 +47,7 @@
                         <tbody>
                             <tr>
                                 <th scope="row">Price</th>
-                                <td class="text-start">32,00 won</td>
+                                <td class="text-start">32,000 won</td>
                             </tr>
                             <tr>
                                 <th scope="row">D/C Price</th>
@@ -58,7 +58,7 @@
                                 <td class="text-start">300 (1%)</td>
                             </tr>
                             <tr>
-                                <th scope="row">Dellvery</th>
+                                <th scope="row">Delivery</th>
                                 <td class="text-start">
                                     <div class="d-flex justify-content-between">
                                         <div class="form-check">
