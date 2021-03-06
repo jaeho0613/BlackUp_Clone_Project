@@ -9,16 +9,16 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width initial-scale=1">
 	<!-- JS -->
-	<script src="../../js/bootstrap.min.js"></script>
-	<script src="../../js/jquery-3.5.1.min.js"></script>
-	<script src="../../js/popper.min.js"></script>
+	<script src="/BlackUp_Clone_Project/js/bootstrap.min.js"></script>
+	<script src="/BlackUp_Clone_Project/js/jquery-3.5.1.min.js"></script>
+	<script src="/BlackUp_Clone_Project/js/popper.min.js"></script>
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="../../css/bootstrap.min.css">
-	<link rel="stylesheet" href="../../css/custom.css">
+	<link rel="stylesheet" href="/BlackUp_Clone_Project/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/BlackUp_Clone_Project/css/custom.css">
 
 	<!-- Category CSS -->
-	<link rel="stylesheet" href="../../css/category.css">
+	<link rel="stylesheet" href="/BlackUp_Clone_Project/css/category.css">
 
 	<title>CategoryForm</title>
 </head>
