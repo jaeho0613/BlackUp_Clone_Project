@@ -76,3 +76,64 @@ insert into sizeset values(8,'M');
 insert into sizeset values(8,'L');
 insert into category values(8,'made','하의');
 insert into imagepath values(8,'https://black-up.kr/web/product/big/202103/54781434854cb2d50b8d27081f9bd61c.jpg','아무거나(아직사용X)');
+
+insert into product values(9,28000,'리처 와이드 코튼팬츠',0,0,0,0,0);
+insert into colorset values(9,'블랙');
+insert into colorset values(9,'네이비');
+insert into colorset values(9,'베이지');
+insert into colorset values(9,'오트밀');
+insert into colorset values(9,'아이보리');
+insert into sizeset values(9,'S');
+insert into sizeset values(9,'M');
+insert into sizeset values(9,'L');
+insert into category values(9,'made','하의');
+insert into imagepath values(9,'https://black-up.kr/web/product/big/202103/e57574e4cc55883c392c502b6da586b7.jpg','아무거나(아직사용X)');
+
+insert into product   values(10,28000,'리처 와이드 코튼팬츠',0,0,0,0,0);
+insert into colorset  values(10,'블랙');
+insert into colorset  values(10,'네이비');
+insert into colorset  values(10,'베이지');
+insert into colorset  values(10,'오트밀');
+insert into colorset  values(10,'아이보리');
+insert into sizeset   values(10,'S');
+insert into sizeset   values(10,'M');
+insert into sizeset   values(10,'L');
+insert into category  values(10,'made','하의');
+insert into imagepath values(10,'https://black-up.kr/web/product/big/202103/e57574e4cc55883c392c502b6da586b7.jpg','아무거나(아직사용X)');
+
+insert into product   values(11,28000,'리처 와이드 코튼팬츠',0,0,0,0,0);
+insert into colorset  values(11,'블랙');
+insert into colorset  values(11,'네이비');
+insert into colorset  values(11,'베이지');
+insert into colorset  values(11,'오트밀');
+insert into colorset  values(11,'아이보리');
+insert into sizeset   values(11,'S');
+insert into sizeset   values(11,'M');
+insert into sizeset   values(11,'L');
+insert into category  values(11,'made','하의');
+insert into imagepath values(11,'https://black-up.kr/web/product/big/202103/e57574e4cc55883c392c502b6da586b7.jpg','아무거나(아직사용X)');
+
+insert into product   values(12,28000,'리처 와이드 코튼팬츠',0,0,0,0,0);
+insert into colorset  values(12,'블랙');
+insert into colorset  values(12,'네이비');
+insert into colorset  values(12,'베이지');
+insert into colorset  values(12,'오트밀');
+insert into colorset  values(12,'아이보리');
+insert into sizeset   values(12,'S');
+insert into sizeset   values(12,'M');
+insert into sizeset   values(12,'L');
+insert into category  values(12,'made','하의');
+insert into imagepath values(12,'https://black-up.kr/web/product/big/202103/e57574e4cc55883c392c502b6da586b7.jpg','아무거나(아직사용X)');
+
+insert into product   values(13,28000,'리처 와이드 코튼팬츠',0,0,0,0,0);
+insert into colorset  values(13,'블랙');
+insert into colorset  values(13,'네이비');
+insert into colorset  values(13,'베이지');
+insert into colorset  values(13,'오트밀');
+insert into colorset  values(13,'아이보리');
+insert into sizeset   values(13,'S');
+insert into sizeset   values(13,'M');
+insert into sizeset   values(13,'L');
+insert into category  values(13,'made','하의');
+insert into imagepath values(13,'https://black-up.kr/web/product/big/202103/e57574e4cc55883c392c502b6da586b7.jpg','아무거나(아직사용X)');
+
