@@ -3,19 +3,19 @@ package model.standard;
 import model.dto.UserDTO;
 
 public interface Userable {
-	
+
 	// 유저 추가 (회원가입)
-	int insert(UserDTO userDTO) throws Exception;
-	
+	int insert(UserDTO userDTO);
+
 	// 유저 삭제 (회원탈퇴)
-	int delete(String userID) throws Exception;
-	
+	int delete(String userID);
+
 	// 유저 선택 (회원 정보 확인)
-	UserDTO selectOne(String userID) throws Exception;
-	
+	UserDTO selectOne(String userID);
+
 	// 유저 수정 (회원 정보 수정)
-	UserDTO update(UserDTO userDTO) throws Exception;
-	
+	UserDTO update(UserDTO userDTO);
+
 	// 유저 확인 (로그인용)
 	// UserDTO exist(String userID, String Password) throws Exception;
 }

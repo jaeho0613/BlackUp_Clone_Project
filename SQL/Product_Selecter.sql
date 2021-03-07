@@ -5,6 +5,9 @@ from product join colorset on product.pdID = colorset.pdID
              join category on product.pdID = category.pdID
              join imagepath on product.pdID = imagepath.pdID;
              
+-- 카테고리 정보
+select distinct cgType from category where cgName = 'made';
+             
 -- 특정 카테고리 상품 가져오기
 select pdID, pdPrice, pdName
 from product
