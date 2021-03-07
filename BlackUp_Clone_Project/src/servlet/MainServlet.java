@@ -10,14 +10,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @SuppressWarnings("serial")
-@WebServlet("/product")
-public class ProductServlet extends HttpServlet {
+@WebServlet("/main")
+public class MainServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+		
 		resp.setContentType("text/html; charset=utf-8");
-		RequestDispatcher rd = req.getRequestDispatcher("/jsp/form/ProductForm.jsp");
+		RequestDispatcher rd = req.getRequestDispatcher("/MainForm.jsp");
 		rd.include(req, resp);
 	}
 
@@ -25,7 +25,6 @@ public class ProductServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		super.doPost(req, resp);
-
 	}
 
 }

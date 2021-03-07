@@ -38,7 +38,7 @@ insert into colorset values(4,'딥그린');
 insert into colorset values(4,'아이보리');
 insert into colorset values(4,'옐로우');
 insert into sizeset values(4,'free');
-insert into category values(4, 'set','');
+insert into category values(4, 'set','set');
 insert into imagepath values(4,'https://black-up.kr/web/product/big/202102/aa5102cd8ebc7653c1a26440b44c3aa1.jpg','아무거나(아직사용X)');
 
 -- TODAY'S NEW Items 상품 4가지
