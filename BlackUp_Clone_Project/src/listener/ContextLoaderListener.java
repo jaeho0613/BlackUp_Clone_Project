@@ -1,6 +1,7 @@
 package listener;
 
 import javax.naming.InitialContext;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
@@ -45,7 +46,7 @@ public class ContextLoaderListener implements ServletContextListener {
 			sc.setAttribute("userDAO", userDAO);
 
 		} catch (Exception e) {
-			e.printStackTrace();
+			
 		}
 	}
 

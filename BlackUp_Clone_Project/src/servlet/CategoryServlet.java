@@ -101,8 +101,9 @@ public class CategoryServlet extends HttpServlet {
 			// rd.forward(req, resp);
 
 		} catch (Exception e) {
-			System.out.println("CateGoryServlet 오류!");
-			e.printStackTrace();
+			req.setAttribute("error", e);
+			RequestDispatcher rd = req.getRequestDispatcher("/Error.jsp");
+			rd.forward(req,resp);
 		}
 	}
 
