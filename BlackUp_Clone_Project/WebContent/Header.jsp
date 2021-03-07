@@ -24,9 +24,9 @@
 						data-bs-toggle="dropdown" aria-expanded="false">MADE
 					</a>
 					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<li><a class="dropdown-item" href="/BlackUp_Clone_Project/category?name=made&type=상의">상의</a></li>
-						<li><a class="dropdown-item" href="/BlackUp_Clone_Project/category?name=made&type=하의">하의</a></li>
-						<li><a class="dropdown-item" href="/BlackUp_Clone_Project/category??name=made&type=기타">기타</a></li>
+						<li><a class="dropdown-item" href="/BlackUp_Clone_Project/category?name=MADE&type=상의">상의</a></li>
+						<li><a class="dropdown-item" href="/BlackUp_Clone_Project/category?name=MADE&type=하의">하의</a></li>
+						<li><a class="dropdown-item" href="/BlackUp_Clone_Project/category??name=MADE&type=기타">기타</a></li>
 					</ul>
 				</li>
 				<!-- OUTER -->
@@ -34,10 +34,10 @@
 						data-bs-toggle="dropdown" aria-expanded="false">OUTER
 					</a>
 					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<li><a class="dropdown-item" href="/BlackUp_Clone_Project/category?name=outer&type=가디건">가디건</a></li>
-						<li><a class="dropdown-item" href="/BlackUp_Clone_Project/category?name=outer&type=자켓/베스트">자켓/베스트</a></li>
-						<li><a class="dropdown-item" href="/BlackUp_Clone_Project/category?name=outer&type=점퍼">점퍼</a>
-						<li><a class="dropdown-item" href="/BlackUp_Clone_Project/category?name=outer&type=코드">코트</a>
+						<li><a class="dropdown-item" href="/BlackUp_Clone_Project/category?name=OUTER&type=가디건">가디건</a></li>
+						<li><a class="dropdown-item" href="/BlackUp_Clone_Project/category?name=OUTER&type=자켓/베스트">자켓/베스트</a></li>
+						<li><a class="dropdown-item" href="/BlackUp_Clone_Project/category?name=OUTER&type=점퍼">점퍼</a>
+						<li><a class="dropdown-item" href="/BlackUp_Clone_Project/category?name=OUTER&type=코드">코트</a>
 						</li>
 					</ul>
 				</li>

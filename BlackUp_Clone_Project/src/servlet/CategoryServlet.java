@@ -30,7 +30,7 @@ public class CategoryServlet extends HttpServlet {
 			ServletContext sc = this.getServletContext();
 
 			// 카테고리 이름 (대문자로 변경)
-			String cgName = req.getParameter("name").toUpperCase();
+			String cgName = req.getParameter("name");
 
 			// ContextLoaderListener에서 생성한 DAO 가져오기
 			ProductDAO productDAO = (ProductDAO) sc.getAttribute("productDAO");

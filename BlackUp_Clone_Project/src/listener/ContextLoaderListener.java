@@ -27,23 +27,23 @@ public class ContextLoaderListener implements ServletContextListener {
 
 			UserDAO userDAO = new UserDAO();
 			userDAO.setDataSource(ds);
-			
+
 			// 연결 테스트 출력
-			 UserDTO userDTO = userDAO.selectOne("wind2104");
-			 System.out.println(userDTO.getUserID());
-			 System.out.println(userDTO.getUserRating());
-			 System.out.println(userDTO.getUserPassword());
-			 System.out.println(userDTO.getUserPasswordHash());
-			 System.out.println(userDTO.getUserName());
-			 System.out.println(userDTO.getUserID());
-			 System.out.println(userDTO.getUserAddress());
-			 System.out.println(userDTO.getUserPhone());
-			 System.out.println(userDTO.getUserSex());
+//			 UserDTO userDTO = userDAO.selectOne("wind2104");
+//			 System.out.println(userDTO.getUserID());
+//			 System.out.println(userDTO.getUserRating());
+//			 System.out.println(userDTO.getUserPassword());
+//			 System.out.println(userDTO.getUserPasswordHash());
+//			 System.out.println(userDTO.getUserName());
+//			 System.out.println(userDTO.getUserID());
+//			 System.out.println(userDTO.getUserAddress());
+//			 System.out.println(userDTO.getUserPhone());
+//			 System.out.println(userDTO.getUserSex());
 
 			// 서버 실행시 DAO 객체 저장
 			sc.setAttribute("productDAO", productDAO);
 			sc.setAttribute("userDAO", userDAO);
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

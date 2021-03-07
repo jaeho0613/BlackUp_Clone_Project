@@ -91,7 +91,7 @@ public class UserDAO implements Userable {
 		return -1; // 실패하면 -1반환
 	}
 
-	// 유저 데이터 삭제 
+	// 유저 데이터 삭제
 	@Override
 	public int delete(String userID) {
 		Connection conn = null;

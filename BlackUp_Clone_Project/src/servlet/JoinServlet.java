@@ -15,12 +15,12 @@ public class JoinServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
+
 		resp.setContentType("text/html; charset=utf-8");
 		RequestDispatcher rd = req.getRequestDispatcher("/jsp/form/JoInForm.jsp");
 		rd.include(req, resp);
 	}
-	
+
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
