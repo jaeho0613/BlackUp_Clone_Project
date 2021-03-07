@@ -18,7 +18,7 @@ public class UserDAO implements Userable {
 
 	// 유저 데이터 가져오기
 	@Override
-	public UserDTO selectOne(String userID) throws Exception {
+	public UserDTO selectOne(String userID) {
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
@@ -48,7 +48,7 @@ public class UserDAO implements Userable {
 
 	// 유저 데이터 작성
 	@Override
-	public int insert(UserDTO userDTO) throws Exception {
+	public int insert(UserDTO userDTO){
 		Connection conn = null;
 		PreparedStatement stmt = null;
 
@@ -91,7 +91,7 @@ public class UserDAO implements Userable {
 	}
 // 유저 데이터 삭제 
 	@Override
-	public int delete(String userID) throws Exception {
+	public int delete(String userID) {
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		
@@ -131,7 +131,7 @@ public class UserDAO implements Userable {
 
 	// 유저 데이터 업로드 
 	@Override
-	public UserDTO update(UserDTO userDTO) throws Exception {
+	public UserDTO update(UserDTO userDTO) {
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
@@ -186,11 +186,6 @@ public class UserDAO implements Userable {
 
 			}
 		}
-		
-		
-		
-		
-		
 		return null;
 	}
 
