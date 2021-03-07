@@ -30,7 +30,7 @@
 
 	<!-- 상단 UI 부분 -->
 	<section id="category_item">
-		<h2 class="nav justify-content-center">MADE</h2>
+		<h2 class="nav justify-content-center">${cgName}</h2>
 		<div>
 			<ul class="nav justify-content-center">
 				<li class="nav-item"><a class="nav-link" href="#" style="color: #000000">상의</a></li>

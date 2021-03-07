@@ -10,27 +10,30 @@ import model.dto.ProductDTO;
 import model.dto.SizeSetDTO;
 
 public interface Productable {
+	
+	// 특정 카테고리 타입 가져오기
+	ArrayList<String> getCategoryTypeList(String cgName);
 
 	// 상품 전체 가져오기
-	ArrayList<ProductDTO> getProductList() throws Exception;
+	ArrayList<ProductDTO> getProductList();
 	
 	// 카테고리별 상품 정보 가져오기
-	ArrayList<ProductDTO> getCategoryByProduct(String cgName) throws Exception;
+	ArrayList<ProductDTO> getCategoryByProduct(String cgName);
 	
 	// 상품 정보 가져오기 - pdID
-	int getProductID(String pdName) throws Exception;
+	int getProductID(String pdName);
 	
 	// 상품 정보 가져오기 - pdName
-	String getProductName(int pdId) throws Exception; 
+	String getProductName(int pdId);
 
 	// 특정 상품 가져오기 - 아이디로
-	Object selectOne(Set set, int pdID) throws Exception;
+	Object selectOne(Set set, int pdID);
 
 	// 특정 상품 가져오기 - 상품명으로
-	Object selectOne(Set set, String pdName) throws Exception;
+	Object selectOne(Set set, String pdName);
 
 	// 특정 상품 삭제
-	int delete(int pdID) throws Exception;
+	int delete(int pdID);
 
 	// 어떤 셋을 가져올지
 	public enum Set {

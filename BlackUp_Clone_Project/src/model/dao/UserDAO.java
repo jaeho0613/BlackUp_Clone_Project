@@ -18,7 +18,7 @@ public class UserDAO implements Userable {
 
 	// 유저 데이터 가져오기
 	@Override
-	public UserDTO selectOne(String userID) throws Exception {
+	public UserDTO selectOne(String userID) {
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
@@ -48,7 +48,7 @@ public class UserDAO implements Userable {
 
 	// 유저 데이터 작성
 	@Override
-	public int insert(UserDTO userDTO) throws Exception {
+	public int insert(UserDTO userDTO) {
 		Connection conn = null;
 		PreparedStatement stmt = null;
 
@@ -69,7 +69,8 @@ public class UserDAO implements Userable {
 
 		} catch (Exception e) {
 			System.out.println("UserDAO write 오류입니다.");
-			e.printStackTrace();;
+			e.printStackTrace();
+			;
 		} finally {
 			try {
 				if (stmt != null) {
@@ -86,29 +87,29 @@ public class UserDAO implements Userable {
 
 			}
 		}
-		
+
 		return -1; // 실패하면 -1반환
 	}
-// 유저 데이터 삭제 
+
+	// 유저 데이터 삭제 
 	@Override
-	public int delete(String userID) throws Exception {
+	public int delete(String userID) {
 		Connection conn = null;
 		PreparedStatement stmt = null;
-		
+
 		try {
 			conn = ds.getConnection();
 			stmt = conn.prepareStatement("delete from user where userID = ?");
 			stmt.setString(1, userID);
-			
+
 			return stmt.executeUpdate();
-			
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		finally {
-			
+
 			try {
 				if (stmt != null) {
 					stmt.close();
@@ -124,46 +125,37 @@ public class UserDAO implements Userable {
 
 			}
 		}
-		
-		
+
 		return -1;
 	}
 
-	// 유저 데이터 업로드 
+	// 유저 데이터 업로드
 	@Override
-	public UserDTO update(UserDTO userDTO) throws Exception {
+	public UserDTO update(UserDTO userDTO) {
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
-		
-		
-		
+
 		try {
 			conn = ds.getConnection();
-			stmt = conn.prepareStatement("update user set userRating = ?, userPassword = ?, userPasswordHash = ?, userName = ?, \n"
-					+ "				userAddress = ?, userPhone = ?, userSex = ? \n"
-					+ "where userID = ?");
-			
+			stmt = conn.prepareStatement(
+					"update user set userRating = ?, userPassword = ?, userPasswordHash = ?, userName = ?, \n"
+							+ "				userAddress = ?, userPhone = ?, userSex = ? \n" + "where userID = ?");
+
 			rs = stmt.executeQuery();
 			rs.next();
-			
-			UserDTO user = new UserDTO()
-					.setUserAddress(rs.getString("userAddress"))
-					.setUserID(rs.getString("userID"))
-					.setUserName(rs.getString("userName"))
-					.setUserPassword(rs.getString("userPassword"))
-					.setUserPasswordHash(rs.getString("userPasswordHash"))
-					.setUserPhone(rs.getString("userPhone"))
-					.setUserRating(rs.getInt("userRating"))
-					.setUserSex(rs.getString("userSex"));
-					
+
+			UserDTO user = new UserDTO().setUserAddress(rs.getString("userAddress")).setUserID(rs.getString("userID"))
+					.setUserName(rs.getString("userName")).setUserPassword(rs.getString("userPassword"))
+					.setUserPasswordHash(rs.getString("userPasswordHash")).setUserPhone(rs.getString("userPhone"))
+					.setUserRating(rs.getInt("userRating")).setUserSex(rs.getString("userSex"));
+
 			return user;
-			
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
-		}finally {
-			
+		} finally {
+
 			try {
 				if (rs != null) {
 					rs.close();
@@ -186,12 +178,6 @@ public class UserDAO implements Userable {
 
 			}
 		}
-		
-		
-		
-		
-		
 		return null;
 	}
-
 }

@@ -26,14 +26,18 @@ public class CategoryServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
 		try {
-
 			// DataSource를 가져오기 위해 ServletContext 변수 생성
 			ServletContext sc = this.getServletContext();
 
+			// 카테고리 이름 (대문자로 변경)
+			String cgName = req.getParameter("name").toUpperCase();
+
 			// ContextLoaderListener에서 생성한 DAO 가져오기
 			ProductDAO productDAO = (ProductDAO) sc.getAttribute("productDAO");
-			ArrayList<ProductDTO> productList = productDAO.getCategoryByProduct(req.getParameter("name"));
+			ArrayList<ProductDTO> productList = productDAO.getCategoryByProduct(cgName);
+			ArrayList<String> cgTypeList = productDAO.getCategoryTypeList(cgName);
 
+			// 가져온 ProductList 출력
 			for (ProductDTO productDTO : productList) {
 				System.out.println();
 				System.out.println("-------------------------------------");
@@ -76,14 +80,29 @@ public class CategoryServlet extends HttpServlet {
 				System.out.println();
 			}
 
+			// JSP에서 사용하기 위해 request 저장소에 저장 - productList
 			req.setAttribute("productList", productList);
 
+			// JSP에서 사용하기 위해 request 저장소에 저장 - cgName
+			req.setAttribute("cgName", cgName);
+
+			// JSP에서 사용하기 위해 request 저장소에 저장 - cgName
+			req.setAttribute("cgTypeList", cgTypeList);
+
 			resp.setContentType("text/html; charset=utf-8");
+
+			// View (화면에 보이는 디자인)은 JSP에게 위임
 			RequestDispatcher rd = req.getRequestDispatcher("/jsp/form/CategoryForm.jsp");
+
+			// include : View 출력후 제어권이 다시 돌아옴.
 			rd.include(req, resp);
 
-		} catch (Exception e) {
+			// forward : View 출력후 제어권이 다시 돌아오지 않음.
+			// rd.forward(req, resp);
 
+		} catch (Exception e) {
+			System.out.println("CateGoryServlet 오류!");
+			e.printStackTrace();
 		}
 	}
 

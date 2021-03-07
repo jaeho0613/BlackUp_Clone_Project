@@ -20,12 +20,13 @@ public class ProductDAO implements Productable {
 
 	DataSource ds;
 
+	// 의존성 주입
 	public void setDataSource(DataSource ds) {
 		this.ds = ds;
 	}
 
 	@Override
-	public ArrayList<ProductDTO> getProductList() throws Exception {
+	public ArrayList<ProductDTO> getProductList() {
 
 		Connection conn = null;
 		Statement stmt = null;
@@ -86,7 +87,7 @@ public class ProductDAO implements Productable {
 	}
 
 	@Override
-	public ArrayList<ProductDTO> getCategoryByProduct(String cgName) throws Exception {
+	public ArrayList<ProductDTO> getCategoryByProduct(String cgName) {
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
@@ -149,7 +150,55 @@ public class ProductDAO implements Productable {
 	}
 
 	@Override
-	public Object selectOne(Set set, int pdID) throws Exception {
+	public ArrayList<String> getCategoryTypeList(String cgName) {
+		Connection conn = null;
+		PreparedStatement stmt = null;
+		ResultSet rs = null;
+
+		try {
+			ArrayList<String> cgTypeList = new ArrayList<String>();
+			conn = ds.getConnection();
+			stmt = conn.prepareStatement("select distinct cgType from category where cgName = ?");
+			stmt.setString(1, cgName);
+			rs = stmt.executeQuery();
+
+			while (rs.next()) {
+				cgTypeList.add(rs.getString("cgType"));
+			}
+
+			return cgTypeList;
+
+		} catch (Exception e) {
+			System.out.println("productDAO selectOne id Error!");
+			e.printStackTrace();
+		} finally {
+			try {
+				if (rs != null) {
+					rs.close();
+				}
+			} catch (Exception e2) {
+
+			}
+			try {
+				if (stmt != null) {
+					stmt.close();
+				}
+			} catch (Exception e2) {
+
+			}
+			try {
+				if (conn != null) {
+					conn.close();
+				}
+			} catch (Exception e2) {
+
+			}
+		}
+		return null;
+	}
+
+	@Override
+	public Object selectOne(Set set, int pdID) {
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
@@ -230,7 +279,7 @@ public class ProductDAO implements Productable {
 	}
 
 	@Override
-	public Object selectOne(Set set, String pdName) throws Exception {
+	public Object selectOne(Set set, String pdName) {
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
@@ -311,7 +360,7 @@ public class ProductDAO implements Productable {
 	}
 
 	@Override
-	public int getProductID(String pdName) throws Exception {
+	public int getProductID(String pdName) {
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
@@ -355,7 +404,7 @@ public class ProductDAO implements Productable {
 	}
 
 	@Override
-	public String getProductName(int pdId) throws Exception {
+	public String getProductName(int pdId) {
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
@@ -399,8 +448,8 @@ public class ProductDAO implements Productable {
 	}
 
 	@Override
-	public int delete(int pdID) throws Exception {
-		// TODO Auto-generated method stub
+	public int delete(int pdID) {
+
 		return 0;
 	}
 }
