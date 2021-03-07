@@ -54,7 +54,7 @@ public class UserDAO implements Userable {
 
 		try {
 			conn = ds.getConnection();
-			stmt = conn.prepareStatement("insert into user values(?, 0, ?, ?, ?, ?, ? ,?)");
+			stmt = conn.prepareStatement("insert into user values(?, ?, ?, ?, ?, ?, ? ,?)");
 
 			stmt.setString(1, userDTO.getUserID());
 			stmt.setInt(2, userDTO.getUserRating());
@@ -68,7 +68,7 @@ public class UserDAO implements Userable {
 			return stmt.executeUpdate(); // 성공하면 1반환
 
 		} catch (Exception e) {
-			System.out.println("UserDAO write 오류입니다.");
+			System.out.println("UserDAO insert 오류입니다.");
 			e.printStackTrace();
 			;
 		} finally {
