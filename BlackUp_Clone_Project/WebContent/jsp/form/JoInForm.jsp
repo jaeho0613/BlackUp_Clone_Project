@@ -31,7 +31,7 @@ pageEncoding="UTF-8"%>
     <div class="col-lg-5"></div>
     <div class="col-lg-5" style="margin: auto">
       <div class="jumbtron" style="padding-top: 100px">
-        <form method="post" action="join">
+        <form method="post" action="/BlackUp_Clone_Project/join">
           <h3 style="text-align: center">회원가입</h3>
           <div class="form-group" style="text-align: center; margin: 0px 0px 10px 0px">
             <br />
