@@ -80,7 +80,7 @@
 		<!-- 그룹 1 -->
 		<div class="card-group">
 			<div class="card">
-				<a href="/BlackUp_Clone_Project/jsp/form/ProductForm.jsp">
+				<a href="BlackUp_Clone_Project/category?name=MADE&type=상의">
 					<img src="https://black-up.kr/web/product/medium/202102/e5bf60faf4bfa80de1fd8bbc9a09407b.webp"
 					class="card-img-top" alt="...">
 				</a>

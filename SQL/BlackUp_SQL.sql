@@ -15,7 +15,7 @@ create table User(
 );
 
 create table Product(
-	pdID int not null comment '상품 번호',
+	pdID int not null auto_increment comment '상품 번호',
 	pdPrice int not null comment '상품 금액',
 	pdName varchar(64) not null comment '상품 이름',
 	pdGPA5 int, 
