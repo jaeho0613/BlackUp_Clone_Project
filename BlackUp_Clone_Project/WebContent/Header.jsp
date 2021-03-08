@@ -15,10 +15,6 @@
 		<div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
 			<!-- 우측 Navar Menu -->
 			<ul class="navbar-nav mb-2 mb-lg-0">
-				<!-- Best50 -->
-				<li class="nav-item"><a class="nav-link active" aria-current="page" href="#">BEST50</a></li>
-				<!-- new -->
-				<li class="nav-item"><a class="nav-link active" aria-current="page" href="#">NEW</a></li>
 				<!-- MADE -->
 				<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
 						data-bs-toggle="dropdown" aria-expanded="false">MADE
@@ -46,13 +42,8 @@
 						data-bs-toggle="dropdown" aria-expanded="false">PANTS
 					</a>
 					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<li><a class="dropdown-item" href="#">슬랙스</a></li>
-						<li><a class="dropdown-item" href="#">데님</a></li>
-						<li><a class="dropdown-item" href="#">면바지</a></li>
-						<li><a class="dropdown-item" href="#">트레이닝</a></li>
-						<li><a class="dropdown-item" href="#">조거팬츠</a></li>
-						<li><a class="dropdown-item" href="#">숏/반바지</a></li>
-						<li><a class="dropdown-item" href="#">ETC</a></li>
+						<li><a class="dropdown-item" href="/BlackUp_Clone_Project/category?name=PANTS&type=슬랙스">슬랙스</a></li>
+						<li><a class="dropdown-item" href="/BlackUp_Clone_Project/category?name=PANTS&type=면바지">면바지</a></li>
 					</ul>
 				</li>
 				<!-- sale -->
