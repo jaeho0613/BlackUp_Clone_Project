@@ -84,8 +84,7 @@
 			<div class="card-group">
 				<c:forEach var="made" items="${ madeList }">
 					<div class="card">
-						<a href="/BlackUp_Clone_Project/jsp/form/ProductForm.jsp">
-						 <img
+						<a href="/BlackUp_Clone_Project/jsp/form/ProductForm.jsp"> <img
 							src="${ made.imagePathList[0].imgPath }" class="card-img-top"
 							alt="..." />
 						</a>
@@ -97,30 +96,39 @@
 
 	<!-- 상의 이미지 그리드 섹션 -->
 	<section class="container" id="top_item">
-		<h2 class="product-title text-start">Recent hot item</h2>
+		<h2 class="product-title text-start">Outer item</h2>
+
+		<c:forEach begin="0" end="1">
+			<div class="card-group">
+				<c:forEach var="outer" items="${outerList }">
+					<div class="card">
+						<a href="BlackUp_Clone_Project/category?name=MADE&type=상의"> <img
+							src="${outer.imagePathList[1].imgPath }"
+							class="card-img-top" alt="...">
+						</a>
+				</c:forEach>
+			</div>
+
+		</c:forEach>
 		<!-- 그룹 1 -->
-		<div class="card-group">
-			<div class="card">
-				<a href="BlackUp_Clone_Project/category?name=MADE&type=상의"> <img
-					src="https://black-up.kr/web/product/medium/202102/e5bf60faf4bfa80de1fd8bbc9a09407b.webp"
-					class="card-img-top" alt="...">
-				</a>
-			</div>
-			<div class="card">
-				<img
-					src="https://black-up.kr/web/product/medium/202103/c8e553149f4fe4b6099e0ab64073f87a.webp"
-					class="card-img-top" alt="...">
-			</div>
-			<div class="card">
-				<img
-					src="https://black-up.kr/web/product/medium/202102/bedb9e463c11163a7069dabf6577ba39.webp"
-					class="card-img-top" alt="...">
-			</div>
-			<div class="card">
-				<img
-					src="https://black-up.kr/web/product/medium/202102/8c5896bf7771c02a4948a3be541fe31e.webp"
-					class="card-img-top" alt="...">
-			</div>
+
+
+
+		<div class="card">
+			<img
+				src="https://black-up.kr/web/product/medium/202103/c8e553149f4fe4b6099e0ab64073f87a.webp"
+				class="card-img-top" alt="...">
+		</div>
+		<div class="card">
+			<img
+				src="https://black-up.kr/web/product/medium/202102/bedb9e463c11163a7069dabf6577ba39.webp"
+				class="card-img-top" alt="...">
+		</div>
+		<div class="card">
+			<img
+				src="https://black-up.kr/web/product/medium/202102/8c5896bf7771c02a4948a3be541fe31e.webp"
+				class="card-img-top" alt="...">
+		</div>
 		</div>
 		<!-- 그룹 2 -->
 		<div class="card-group">

@@ -25,11 +25,13 @@ public class MainServlet extends HttpServlet {
 			
 			ProductDAO productDAO = (ProductDAO) sc.getAttribute("productDAO");
 			ArrayList<ProductDTO> madeProductList  = productDAO.getCategoryByProduct("made");
+			ArrayList<ProductDTO> outerProductList = productDAO.getCategoryByProduct("outer");
+			
 //			ArrayList<ProductDTO> outerProductList  = productDAO.getCategoryByProduct("outer");
 //			ArrayList<ProductDTO> pantsProductList  = productDAO.getCategoryByProduct("pants");
 			
 			req.setAttribute("madeList", madeProductList);
-			
+			req.setAttribute("outerList", outerProductList);
 
 			resp.setContentType("text/html; charset=utf-8");
 			RequestDispatcher rd = req.getRequestDispatcher("/MainForm.jsp");
