@@ -10,12 +10,16 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import javax.websocket.Session;
 
 import model.dao.UserDAO;
 
 @SuppressWarnings("serial")
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
+	HttpSession session;
+	
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -39,10 +43,18 @@ public class LoginServlet extends HttpServlet {
 
 		resp.setContentType("text/html; charset=utf-8");
 		int result = userDAO.login(req.getParameter("userID"), req.getParameter("userPassword"));
-
+		
+		
+		
 		if (result == 1) { // 로그인 성공 시
-			System.out.println("로그인이 성공하였습니다.");
-			resp.sendRedirect("main");
+			session = req.getSession();
+			session.setAttribute("userID", (req.getParameter("userID") ));  //로그인 성공한 회원에게 세션 부여 구문
+			PrintWriter wr = resp.getWriter();
+			wr.println("<script>");
+			wr.println("alert('로그인 성공하였습니다.');");
+			wr.println("location.href = 'main'");
+			wr.println("</script>");
+			wr.close();
 
 		} else if (result == 0) { // 비밀번호가 틀렸을 경우
 			PrintWriter wr = resp.getWriter();
