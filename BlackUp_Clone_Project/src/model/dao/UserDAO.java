@@ -180,4 +180,37 @@ public class UserDAO implements Userable {
 		}
 		return null;
 	}
+	
+    //  로그인 기능 메소드
+    public int login(String userID, String userPassword) 
+	{   
+    	Connection conn ;            // DB에 접근하는 객체
+		PreparedStatement stmt;     // SQL문을 실행하는 객체를 반환
+		ResultSet rs ;              // DB의 SQL결과를 담을 수 있는 객체 
+		String SQL = "SELECT userPassword FROM USER WHERE userID = ?";  
+		
+		try 
+		{
+			conn = ds.getConnection();
+			stmt = conn.prepareStatement(SQL);
+			stmt.setString(1,  userID);
+			rs = stmt.executeQuery();
+			if(rs.next()) 
+			{
+				if(rs.getString(1).contentEquals(userPassword))
+					return 1; // 로그인 성공
+				else
+					return 0; // 비밀번호 불일치
+			}
+			return -1; // 아이디가 없음
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+		return -2; // 데이터 베이스 오류
+	}
+	
+	
 }
