@@ -53,9 +53,9 @@
 					<!-- 상품 반복문 -->
 					<c:forEach begin="${ vs.index * 5 }" end="${ (vs.index * 5) + 4 }" items="${ productList }" var="product"
 						varStatus="vs2">
-						<p>${ vs2.index }</p>
-						:<P>${ vs.index * 5 + 4 }</P>
-						<p>${ vs2.last }</p>
+						<%-- <p>${ vs2.index }</p> --%>
+						<%-- :<P>${ vs.index * 5 + 4 }</P> --%>
+						<%-- <p>${ vs2.last }</p> --%>
 						<div class="card border-0">
 							<img src="${ product.imagePathList[0].imgPath }" class="card-img-top" alt="..." />
 							<div class="card-body">
@@ -71,7 +71,7 @@
 							</div>
 						</div>
 
-						<c:if test="${ vs.last && (vs2.index != (vs.index * 5 + 4)) }">
+						<c:if test="${ vs2.last && (vs2.index != (vs.index * 5 + 4)) }">
 							<c:forEach begin="0" end="${ ((vs.index * 5 + 4) - vs2.index) - 1 }">
 								<div class="card border-0">
 									<img src="http://via.placeholder.com/600x600" class="card-img-top" alt="..." />
@@ -83,7 +83,6 @@
 									</div>
 								</div>
 							</c:forEach>
-
 						</c:if>
 					</c:forEach>
 				</div>
