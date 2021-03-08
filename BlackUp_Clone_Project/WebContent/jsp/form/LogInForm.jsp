@@ -2,7 +2,6 @@
 pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-
 <head>
   <!-- Web 설정 -->
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -30,7 +29,7 @@ pageEncoding="UTF-8"%>
     <div class="col-lg-5"></div>
     <div class="col-lg-5" style="margin: auto">
       <div class="jumbtron" style="padding-top: 20px">
-        <form method="post" action="loginAction.jsp">
+        <form method="post" action="login">
           <h3 style="text-align: center">로그인 화면</h3>
           <div class="form-group">
             <br />
@@ -48,7 +47,7 @@ pageEncoding="UTF-8"%>
     </div>
     <div class="col-lg-5"></div>
   </div>
-
+    
   <!-- 푸터 영역  -->
   <jsp:include page="../../Footer.jsp"></jsp:include>
 </body>
