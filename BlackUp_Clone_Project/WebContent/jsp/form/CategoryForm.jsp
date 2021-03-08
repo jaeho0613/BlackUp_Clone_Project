@@ -66,8 +66,8 @@
 								<p class="text-center">${ product.pdPrice }won</p>
 								<!-- 컬러 셋 -->
 								<div class="colors d-flex align-items-center justify-content-center mt-1">
-									<c:forEach var="color" items="${product.colorSetList }">
-										<span class="border border-light" style="background-color: #4bab6d"></span>
+									<c:forEach var="color" items="${product.colorSetList }" varStatus="cs">
+										<span class="border border-light" style="background-color: ${product.colorSetList[cs.index].colorCode}"></span>
 									</c:forEach>
 								</div>
 							</div>

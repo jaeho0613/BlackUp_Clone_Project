@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import model.dao.UserDAO;
-import model.dto.UserDTO;
 
 @SuppressWarnings("serial")
 @WebServlet("/login")
@@ -37,9 +36,6 @@ public class LoginServlet extends HttpServlet {
 		// req.getAttribute로 사용자의 입력값 받아오기.
 		// UserDAO를 이용하여 로그인 검사
 		UserDAO userDAO = (UserDAO) sc.getAttribute("userDAO");
-
-		UserDTO userDTO = new UserDTO().setUserID(req.getParameter("userID"))
-				.setUserPassword(req.getParameter("userPassword"));
 
 		resp.setContentType("text/html; charset=utf-8");
 		int result = userDAO.login(req.getParameter("userID"), req.getParameter("userPassword"));
@@ -77,6 +73,5 @@ public class LoginServlet extends HttpServlet {
 			wr.println("</script>");
 			wr.close();
 		}
-
 	}
 }

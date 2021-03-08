@@ -232,7 +232,8 @@ public class ProductDAO implements Productable {
 			case colorset:
 				ArrayList<ColorSetDTO> colorSetList = new ArrayList<ColorSetDTO>();
 				while (rs.next()) {
-					colorSetList.add(new ColorSetDTO().setPdID(rs.getInt("pdID")).setColor(rs.getString("color")));
+					colorSetList.add(new ColorSetDTO().setPdID(rs.getInt("pdID")).setColor(rs.getString("color"))
+							.setColorCode(rs.getString("colorCode")));
 				}
 				return colorSetList;
 			case imagepath:
@@ -313,7 +314,8 @@ public class ProductDAO implements Productable {
 			case colorset:
 				ArrayList<ColorSetDTO> colorSetList = new ArrayList<ColorSetDTO>();
 				while (rs.next()) {
-					colorSetList.add(new ColorSetDTO().setPdID(rs.getInt("pdID")).setColor(rs.getString("color")));
+					colorSetList.add(new ColorSetDTO().setPdID(rs.getInt("pdID")).setColor(rs.getString("color"))
+							.setColorCode(rs.getString("colorCode")));
 				}
 				return colorSetList;
 			case imagepath:

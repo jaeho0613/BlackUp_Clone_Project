@@ -33,7 +33,8 @@ create table SizeSet(
 
 create table ColorSet(
 	pdID int not null comment '상품 번호',
-	Color varchar(20) comment '상품 색상'
+	Color varchar(20) comment '상품 색상',
+    ColorCode varchar(20) comment '색상 HTML 코드'
 );
 
 create table ImagePath(

@@ -20,7 +20,7 @@
 			<input type="password" class="form-control" placeholder="비밀번호" name="userPassword" maxlength="20" value="">
 		</div>	
 		<div>
-			<input type="text" class="form-control" placeholer="이름" name="uesrName" value="">
+			<input type="text" class="form-control" placeholder="이름" name="uesrName" value="">
 		</div>
 		<div>
 			<input type="text" class="form-control" placeholder="주소" name="userAddress" value="">
