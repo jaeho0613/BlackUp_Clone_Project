@@ -3,7 +3,8 @@ package model.dto;
 public class ColorSetDTO {
 
 	int pdID;
-	String Color;
+	String color;
+	String colorCode;
 
 	public int getPdID() {
 		return pdID;
@@ -15,11 +16,11 @@ public class ColorSetDTO {
 	}
 
 	public String getColor() {
-		return Color;
+		return color;
 	}
 
 	public ColorSetDTO setColor(String color) {
-		Color = color;
+		this.color = color;
 		return this;
 	}
 }

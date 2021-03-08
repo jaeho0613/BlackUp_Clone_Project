@@ -36,18 +36,20 @@
 			<ul class="nav justify-content-center">
 				<c:forEach var="type" items="${ cgTypeList }">
 					<li class="nav-item">
-					<a class="nav-link" href="<%= request.getRequestURI() %>?name=${cgName}&type=${ type }"	style="color: #000000">${ type }</a></li>
+						<a class="nav-link" href="<%= request.getRequestURI() %>?name=${cgName}&type=${ type }"
+							style="color: #000000">${ type }</a></li>
 				</c:forEach>
 			</ul>
 		</div>
 	</section>
-	
+
 	<!-- 아이템 섹션 -->
 	<section class="container" id="new_item">
 
 		<c:if test="${!empty productList }">
 			<!-- Group 반복문 -->
-			<c:forEach begin="0" end="${ productList.size() % 5 == 0 ? (productList.size() / 5) - 1 : productList.size() / 5 }" varStatus="vs">
+			<c:forEach begin="0"
+				end="${ productList.size() % 5 == 0 ? (productList.size() / 5) - 1 : productList.size() / 5 }" varStatus="vs">
 				<%-- <P>${ vs.index }</P> --%>
 				<div class="card-group">
 					<!-- 상품 반복문 -->
