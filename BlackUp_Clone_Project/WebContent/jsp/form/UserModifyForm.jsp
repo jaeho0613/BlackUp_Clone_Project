@@ -5,76 +5,81 @@
 <head>
 <meta charset="UTF-8">
 <title>회원정보수정</title>
-<script src="./js/bootstrap.min.js"></script>
-<script src="./js/jquery-3.5.1.min.js"></script>
+  <!-- Web 설정 -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+  <!-- JS -->
+  <script src="/BlackUp_Clone_Project/js/bootstrap.min.js"></script>
+  <script src="/BlackUp_Clone_Project/js/jquery-3.5.1.min.js"></script>
+  <script src="/BlackUp_Clone_Project/js/popper.min.js"></script>
 
-<link rel="stylesheet" href="./css/bootstrap.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="/BlackUp_Clone_Project/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/BlackUp_Clone_Project/css/custom.css">
 </head>
 <body>
-	<div class="jumbotron" style=""padding top:-20px;">
-		<h3 style="text-align:center;">회원정보 수정</h3>
+ <!-- 헤더 영역  -->
+  <jsp:include page="../../Header.jsp"></jsp:include>
+
+	<div class="container" style="padding-top:100px">
+	 <div class="col-lg-4"></div>
+    <div class="col-lg-4" style="margin: auto">
+      <div class="jumbtron" style="padding-top: 20px">
+        
+        <form method="post" action=".jsp">
+		<h3 style="text-align:center; font-weight-bold" >회원정보 수정</h3>
 		<div class="form-group">
-			<input type="text" class="form-control" placeholder="아이디" name="userID" value="<>"readonly>
+		<br>
+			<input style="text-align" type="text" class="form-control" placeholder="아이디" name="userID" value="" readonly>
 		</div>	
 		<div>
-			<input type="password" class="form-control" placeholder="비밀번호" name="userPassword" maxlength="20" value="">
+			<input style="text-align" type="password" class="form-control" placeholder="비밀번호" name="userPassword" maxlength="20" value="">
 		</div>	
 		<div>
+<<<<<<< HEAD
 			<input type="text" class="form-control" placeholder="이름" name="uesrName" value="">
+=======
+			<input style="text-align" type="text" class="form-control" placeholder="이름" name="uesrName" value="" maxlength="20">
 		</div>
 		<div>
-			<input type="text" class="form-control" placeholder="주소" name="userAddress" value="">
+			<input style="text-align" type="text" class="form-control" placeholder="주소" name="userAddress" value="" maxlength="20">
+>>>>>>> future/ModifyForm
 		</div>
 		<div>
-		    <input type="text" class="form-control" placeholder="전화번호" name="userPhone" value="">
+		    <input style="text-align" type="text" class="form-control" placeholder="전화번호" name="userPhone" value="" maxlength="20">
 		</div>
-				<div class="form-group" style="text-align: center;">
-					<div class="btn-group" data-toggle="buttons">
-							<%
-							if(user.getUserSex().equals("MAN")){
-								System.out.println("userUpdate:user.getUserGende_inside 1 : " + user.getUserSex());
-							%>
-								<label class="btn btn-primary active">
-							<% }else {
-								System.out.println("userUpdate:user.getUserGender_inside 2 : " + user.getUserSex());
-							%>
-								<label class="btn btn-primary">
-							<%}%>
-						
-							
-							<input type="radio" name="userGender" autoComplete="off" value="MAN" checked>남자
-						</label>
-						
-							<%
-							if(user.getUserGender().equals("WOMAN")){ 
-								System.out.println("userUpdate:user.getUserGender_inside 3 : " + user.getUserGender());
-							%>
-								<label class="btn btn-primary active">
-							<% }else {
-								System.out.println("userUpdate:user.getUserGender_inside 4 : " + user.getUserGender());
-							%>
-								<label class="btn btn-primary">
-							<%}%>
-						
-							<input type="radio" name="userGender" autoComplete="off" value="WOMAN" checked>여자
-						</label>
-					</div>
-				</div>
-				<div class="form-group">
-					<input type="email" class="form-control" placeholder="이메일" name="userEmail" maxlength="50" value="<%=user.getUserEmail()%>">
-				</div>
-				<input type="submit" class="btn btn-primary form-control" value="수정완료">
+		<br>
+		<div>
+		    <input type="radio" name="userSex" autoComplete="off" value="MAN" checked>남자
+		    <input type="radio" name="userSex" autoComplete="off" value="WOMAN" checked>여자
+		</div>
+		
+		<br>
+		<div class=" col-xs-3 ">
+		<ul>
+		<li>
+		<input type="button" class="btn btn-primary form-control" style="background-color:black; border-color:black"  value="취소" onclick="javascript:window.location='MainForm.jsp'"/>
+		<input type="submit" class="btn btn-primary form-control" style="background-color:black; border-color:black"  value="수정" />
+		</li>
+		</ul>
+		</div>
 			</form>
 		</div>
-		<div class="col-lg-4"></div>
+	
 	</div>
+	
+	
 	<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="js/bootstrap.js"></script>
+	
+	 <!-- 푸터 영역  -->
+  <jsp:include page="../../Footer.jsp"></jsp:include>
+</body>
+
+</html>
 </body>
 </html>
 		
 		
 	
 
-</body>
-</html>
