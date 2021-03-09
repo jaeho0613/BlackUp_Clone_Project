@@ -25,7 +25,7 @@ pageEncoding="UTF-8"%>
   <!-- 헤더 영역  -->
   <jsp:include page="../../Header.jsp"></jsp:include>
 
-  <div class="container" style="padding-top: 100px">
+  <div class="container" style="padding: 200px 100px">
     <div class="col-lg-5"></div>
     <div class="col-lg-5" style="margin: auto">
       <div class="jumbtron" style="padding-top: 20px">
