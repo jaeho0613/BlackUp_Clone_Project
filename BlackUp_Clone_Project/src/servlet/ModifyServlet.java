@@ -34,7 +34,7 @@ public class ModifyServlet extends HttpServlet {
 
 		UserDTO user = userDAO.selectOne(userID);
 
-		req.setAttribute("user", user); //
+		req.setAttribute("user", user);
 
 		RequestDispatcher rd = req.getRequestDispatcher("/jsp/form/UserModifyForm.jsp");
 		rd.include(req, resp);
@@ -43,18 +43,23 @@ public class ModifyServlet extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		req.setCharacterEncoding("utf-8");
 		resp.setContentType("text/html; charset=utf-8");
 
 		ServletContext sc = this.getServletContext();
-		HttpSession session;
 
 		UserDAO userDAO = (UserDAO) sc.getAttribute("userDAO");
-		userDAO.insert(new UserDTO().setUserID(req.getParameter("userID"))
-				.setUserAddress(req.getParameter("UserAddress")).setUserPassword(req.getParameter("UserPassword"))
-				.setUserPhone(req.getParameter("UserPhone")).setUserPasswordHash(req.getParameter("UserPassword"))
-				.setUserRating(0).setUserName(req.getParameter("UserName")).setUserSex(req.getParameter("UserSex")));
+		userDAO.update(new UserDTO()
+				.setUserID(req.getParameter("userID"))
+				.setUserAddress(req.getParameter("userAddress"))
+				.setUserPassword(req.getParameter("userPassword"))
+				.setUserPasswordHash(req.getParameter("userPassword"))
+				.setUserPhone(req.getParameter("userPhone"))
+				.setUserRating(0)
+				.setUserName(req.getParameter("userName"))
+				.setUserSex(req.getParameter("userSex"))
+				);
 
-		session = req.getSession();
 		PrintWriter wr = resp.getWriter();
 		wr.println("<script>");
 		wr.println("alert('회원 정보 변경에 성공했습니다.');");

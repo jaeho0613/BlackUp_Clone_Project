@@ -5,6 +5,8 @@ from product join colorset on product.pdID = colorset.pdID
              join category on product.pdID = category.pdID
              join imagepath on product.pdID = imagepath.pdID;
              
+update user set userRating = 0, userPassword = 3636, userPasswordHash = 3636, userName = "정재호12", userAddress = "강서구", userPhone = "01048129118", userSex = "flame" where userID = "jaeho";
+             
 -- 카테고리 정보
 select distinct * from imagepath where cgName = 'made';
 

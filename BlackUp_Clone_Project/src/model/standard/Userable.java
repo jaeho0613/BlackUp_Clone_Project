@@ -14,7 +14,7 @@ public interface Userable {
 	UserDTO selectOne(String userID);
 
 	// 유저 수정 (회원 정보 수정)
-	UserDTO update(UserDTO userDTO);
+	int update(UserDTO userDTO);
 
 	// 유저 확인 (로그인용)
 	// UserDTO exist(String userID, String Password) throws Exception;

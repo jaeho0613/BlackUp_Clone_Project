@@ -1,7 +1,5 @@
-<%@page import="model.dto.UserDTO"%>
-<%@page import="model.dao.UserDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 
@@ -19,58 +17,53 @@
 	<!-- CSS -->
 	<link rel="stylesheet" href="/BlackUp_Clone_Project/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/BlackUp_Clone_Project/css/custom.css">
-	
-	
 </head>
 
 <body>
 	<!-- 헤더 영역  -->
 	<jsp:include page="../../Header.jsp"></jsp:include>
 
-	
-	<div class="container" style="padding-top:100px">
+	<div class="container" style="padding-top: 100px">
 		<div class="col-lg-4"></div>
 		<div class="col-lg-4" style="margin: auto">
 			<div class="jumbtron" style="padding-top: 20px">
 
 				<form method="post" action="/BlackUp_Clone_Project/modify">
-					<h3 style="text-align:center; font-weight-bold">회원정보 수정</h3>
+					<h3 style="text-align: center;">회원정보 수정</h3>
 					<div class="form-group">
-						<br>
-						<input style="text-align" type="text" class="form-control" placeholder="아이디" name="userID" value="${ user.userID }"
-							readonly/>
+						<br> <input style="" type="text" class="form-control" placeholder="아이디" name="userID"
+							value="${ user.userID }" readonly />
 					</div>
 					<div>
-						<input style="text-align" type="text" class="form-control" placeholder="비밀번호" name="userPassword"
-							maxlength="20" value="${ user.userPassword }"/>
+						<input style="" type="text" class="form-control" placeholder="비밀번호" name="userPassword" maxlength="20"
+							value="${ user.userPassword }" />
 					</div>
 					<div>
-						<input style="text-align" type="text" class="form-control" placeholder="이름" name="uesrName" value="${ user.userName }"
-							maxlength="20"/>
+						<input style="" type="text" class="form-control" placeholder="이름" name="userName" value="${ user.userName }"
+							maxlength="20" />
 					</div>
 					<div>
-						<input style="text-align" type="text" class="form-control" placeholder="주소" name="userAddress" value="${ user.userAddress }"
-							maxlength="20"/>
+						<input style="" type="text" class="form-control" placeholder="주소" name="userAddress"
+							value="${ user.userAddress }" maxlength="20" />
 					</div>
 					<div>
-						<input style="text-align" type="text" class="form-control" placeholder="전화번호" name="userPhone" value="${ user.userPhone }"
-							maxlength="20"/>
+						<input style="" type="text" class="form-control" placeholder="전화번호" name="userPhone"
+							value="${ user.userPhone }" maxlength="20" />
 					</div>
 					<br>
 					<div>
-						<input type="radio" name="userSex" autoComplete="off" value="MAN" checked>남자
-						<input type="radio" name="userSex" autoComplete="off" value="WOMAN" checked>여자
+						<input type="radio" name="userSex" autoComplete="off" value="MAN" checked>남자 <input type="radio"
+							name="userSex" autoComplete="off" value="WOMAN" checked>여자
 					</div>
 
 					<br>
 					<div class=" col-xs-3 ">
 						<ul>
-							<li>
-								<input type="button" class="btn btn-primary form-control"
-									style="background-color:black; border-color:black" value="취소"
-									onclick="javascript:window.location='MainForm.jsp'" />
-								<input type="submit" class="btn btn-primary form-control"
-									style="background-color:black; border-color:black" value="수정" />
+							<li><input type="button" class="btn btn-primary form-control"
+									style="background-color: black; border-color: black" value="취소"
+									onclick="javascript:window.location='MainForm.jsp'" /> <input type="submit"
+									class="btn btn-primary form-control" style="background-color: black; border-color: black"
+									value="수정" />
 							</li>
 						</ul>
 					</div>
@@ -79,15 +72,10 @@
 		</div>
 	</div>
 
-
-	<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
-	<script src="js/bootstrap.js"></script>
-
 	<!-- 푸터 영역  -->
 	<jsp:include page="../../Footer.jsp"></jsp:include>
 </body>
 
-</html>
 </body>
 
 </html>

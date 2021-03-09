@@ -129,9 +129,9 @@ public class UserDAO implements Userable {
 		return -1;
 	}
 
-	// 유저 데이터 업로드
+	// 유저 데이터 업데이트
 	@Override
-	public UserDTO update(UserDTO userDTO) {
+	public int update(UserDTO userDTO) {
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
@@ -139,20 +139,21 @@ public class UserDAO implements Userable {
 		try {
 			conn = ds.getConnection();
 			stmt = conn.prepareStatement(
-					"update user set userRating = ?, userPassword = ?, userPasswordHash = ?, userName = ?, \n"
-							+ "				userAddress = ?, userPhone = ?, userSex = ? \n" + "where userID = ?");
+					"update user set userRating = ?, userPassword = ?, userPasswordHash = ?, userName = ?,"
+										 + " userAddress = ?, userPhone = ?, userSex = ? where userID = ?");
 
-			rs = stmt.executeQuery();
-			rs.next();
-
-			UserDTO user = new UserDTO().setUserAddress(rs.getString("userAddress")).setUserID(rs.getString("userID"))
-					.setUserName(rs.getString("userName")).setUserPassword(rs.getString("userPassword"))
-					.setUserPasswordHash(rs.getString("userPasswordHash")).setUserPhone(rs.getString("userPhone"))
-					.setUserRating(rs.getInt("userRating")).setUserSex(rs.getString("userSex"));
-
-			return user;
+			stmt.setInt(1, userDTO.getUserRating());
+			stmt.setString(2, userDTO.getUserPassword());
+			stmt.setString(3, userDTO.getUserPasswordHash());
+			stmt.setString(4, userDTO.getUserName());
+			stmt.setString(5, userDTO.getUserAddress());
+			stmt.setString(6, userDTO.getUserPhone());
+			stmt.setString(7, userDTO.getUserSex());
+			stmt.setString(8, userDTO.getUserID());
+			return stmt.executeUpdate();
 
 		} catch (Exception e) {
+			System.out.println("UserDAO Update Error!");
 			e.printStackTrace();
 		} finally {
 
@@ -178,39 +179,33 @@ public class UserDAO implements Userable {
 
 			}
 		}
-		return null;
+		return -1;
 	}
-	
-    //  로그인 기능 메소드
-    public int login(String userID, String userPassword) 
-	{   
-    	Connection conn ;            // DB에 접근하는 객체
-		PreparedStatement stmt;     // SQL문을 실행하는 객체를 반환
-		ResultSet rs ;              // DB의 SQL결과를 담을 수 있는 객체 
-		String SQL = "SELECT userPassword FROM USER WHERE userID = ?";  
-		
-		try 
-		{
+
+	// 로그인 기능 메소드
+	public int login(String userID, String userPassword) {
+		Connection conn; // DB에 접근하는 객체
+		PreparedStatement stmt; // SQL문을 실행하는 객체를 반환
+		ResultSet rs; // DB의 SQL결과를 담을 수 있는 객체
+		String SQL = "SELECT userPassword FROM USER WHERE userID = ?";
+
+		try {
 			conn = ds.getConnection();
 			stmt = conn.prepareStatement(SQL);
-			stmt.setString(1,  userID);
+			stmt.setString(1, userID);
 			rs = stmt.executeQuery();
-			if(rs.next()) 
-			{
-				if(rs.getString(1).contentEquals(userPassword))
+			if (rs.next()) {
+				if (rs.getString(1).contentEquals(userPassword))
 					return 1; // 로그인 성공
 				else
 					return 0; // 비밀번호 불일치
 			}
 			return -1; // 아이디가 없음
-		}
-		catch(Exception e)
-		{
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return -2; // 데이터 베이스 오류
 	}
-	
-	
+
 }
