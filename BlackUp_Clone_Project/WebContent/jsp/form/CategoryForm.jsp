@@ -59,7 +59,8 @@
 						<%-- :<P>${ vs.index * 5 + 4 }</P> --%>
 						<%-- <p>${ vs2.last }</p> --%>
 						<div class="card border-0">
-							<img src="${ product.imagePathList[0].imgPath }" class="card-img-top" alt="..." />
+						<a href="/BlackUp_Clone_Project/product?pdID=${ product.pdID }">
+							<img src="${ product.imagePathList[0].imgPath }" class="card-img-top" alt="..." /></a>
 							<div class="card-body">
 								<!-- 상품 정보 -->
 								<p class="text-center">${ product.pdName }</p>
