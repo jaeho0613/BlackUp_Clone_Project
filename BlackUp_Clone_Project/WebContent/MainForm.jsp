@@ -133,7 +133,13 @@ uri="http://java.sun.com/jsp/jstl/core"%>
           </c:forEach>
         </div>
       </c:forEach>
-      <a href="/BlackUp_Clone_Project/main?num=${num }">View More</a>
+      <p class="vbtn" style="text-align: center">
+        <a
+          href="/BlackUp_Clone_Project/main?num=${num }"
+          style="justify-content: center"
+          >View More</a
+        >
+      </p>
     </section>
 
     <!-- PANTS 섹션 -->

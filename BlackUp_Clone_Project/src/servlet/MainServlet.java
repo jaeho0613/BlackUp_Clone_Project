@@ -33,9 +33,9 @@ public class MainServlet extends HttpServlet {
 			
 			
 			ProductDAO productDAO = (ProductDAO) sc.getAttribute("productDAO");
-			ArrayList<ProductDTO> madeProductList  = productDAO.getCategoryByProduct("made");
-			ArrayList<ProductDTO> outerProductList  = productDAO.getCategoryByProduct("outer");
-			ArrayList<ProductDTO> pantsProductList  = productDAO.getCategoryByProduct("pants");
+			ArrayList<ProductDTO> madeProductList  = productDAO.getCategoryByProductList("made");
+			ArrayList<ProductDTO> outerProductList  = productDAO.getCategoryByProductList("outer");
+			ArrayList<ProductDTO> pantsProductList  = productDAO.getCategoryByProductList("pants");
 			
 			
 //			req.setAttribute("vbtn", vbtn);
