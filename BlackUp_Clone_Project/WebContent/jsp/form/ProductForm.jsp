@@ -37,78 +37,76 @@
 				</div>
 				<!-- 데이터 영역 -->
 				<div class="infoArea col-sm">
-					<!-- 상품 정보 -->
-					<table class="table">
-						<thead>
-							<tr>
-								<th class="title text-center" scope="col" colspan="2">${ product.pdName }
-								</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<th scope="row">Price</th>
-								<td class="text-start">
-									<fmt:formatNumber value="${ product.pdPrice }" type="number" />
-									won
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">Point</th>
-								<td class="text-start">
-									<fmt:parseNumber value="${ product.pdPrice / 100 }" pattern="0" /> (1%)</td>
-							</tr>
+					<form action="/pay" method="post" name="dataInfo">
+						<!-- 상품 정보 -->
+						<table class="table">
+							<thead>
+								<tr>
+									<th class="title text-center" scope="col" colspan="2">${ product.pdName}
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">Price</th>
+									<td class="text-start">
+										<fmt:formatNumber value="${ product.pdPrice }" type="number" /> won</td>
+								</tr>
+								<tr>
+									<th scope="row">Point</th>
+									<td class="text-start">
+										<fmt:parseNumber value="${ product.pdPrice / 100 }" pattern="0" /> (1%)</td>
+								</tr>
 
-							<tr>
-								<th scope="row">Delivery</th>
-								<td class="text-start">
-									<div class="d-flex justify-content-between">
-										<div class="form-check">
-											<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
-											<label class="form-check-label" for="flexRadioDefault1">
-												국내 배송 </label>
+								<tr>
+									<th scope="row">Delivery</th>
+									<td class="text-start">
+										<div class="d-flex justify-content-between">
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+												<label class="form-check-label" for="flexRadioDefault1">
+													국내 배송 </label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+													checked />
+												<label class="form-check-label" for="flexRadioDefault2">
+													해외 배송 </label>
+											</div>
 										</div>
-										<div class="form-check">
-											<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
-												checked />
-											<label class="form-check-label" for="flexRadioDefault2">
-												해외 배송 </label>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">Size</th>
+									<td class="text-start">
+										<div class="d-flex justify-content-end">
+											<select class="form-select form-select-sm" aria-label=".form-select-sm example">
+												<option selected>-[필수] 옵션을 선택해 주세요 -</option>
+												<c:forEach items="${ product.sizeSetList }" var="sizeSet" varStatus="vs">
+													<option value="${ vs.index }">${ sizeSet.size }</option>
+												</c:forEach>
+											</select>
 										</div>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">Size</th>
-								<td class="text-start">
-									<div class="d-flex justify-content-end">
-										<select class="form-select form-select-sm" aria-label=".form-select-sm example">
-											<option selected>-[필수] 옵션을 선택해 주세요 -</option>
-											<c:forEach items="${ product.sizeSetList }" var="sizeSet" varStatus="vs">
-												<option value="${ vs.index }">${ sizeSet.size }</option>
-											</c:forEach>
-										</select>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">Color</th>
-								<td class="text-start">
-									<div class="d-flex justify-content-end">
-										<select class="form-select form-select-sm" aria-label=".form-select-sm example">
-											<option selected>-[필수] 옵션을 선택해 주세요 -</option>
-											<c:forEach items="${ product.colorSetList }" var="colorSet" varStatus="vs">
-												<option value="${ vs.index }">${ colorSet.color }</option>
-											</c:forEach>
-										</select>
-									</div>
-								</td>
-							</tr>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">Color</th>
+									<td class="text-start">
+										<div class="d-flex justify-content-end">
+											<select class="form-select form-select-sm" aria-label=".form-select-sm example">
+												<option selected>-[필수] 옵션을 선택해 주세요 -</option>
+												<c:forEach items="${ product.colorSetList }" var="colorSet" varStatus="vs">
+													<option value="${ vs.index }">${ colorSet.color }</option>
+												</c:forEach>
+											</select>
+										</div>
+									</td>
+								</tr>
 
-							<tr>
+								<!-- <tr>
 								<th scope="row" colspan="2" class="text-center table-active">
 									선택한 목록</th>
 							</tr>
-							<!-- 선택창 -->
 							<tr>
 								<th scope="row">[MADE] 리타 블루 스트레이트 데님 팬츠</th>
 								<td class="text-start">S, 차콜</td>
@@ -120,16 +118,17 @@
 							<tr>
 								<th scope="row">Total</th>
 								<td class="text-start">32,000 won</td>
-							</tr>
-						</tbody>
-					</table>
-					<!-- 상품 버튼 -->
-					<div class="d-grid gap-3">
-						<button class="btn btn-dark" type="button">BUY NOW</button>
-						<button class="btn btn-secondary" type="button">ADD TO
-							CART</button>
-						<button class="btn btn-light" type="submit">WISH LIST</button>
-					</div>
+							</tr> -->
+							</tbody>
+						</table>
+						<!-- 상품 버튼 -->
+						<div class="d-grid gap-3">
+							<button class="btn btn-dark" type="submit">BUY NOW</button>
+							<button class="btn btn-secondary" type="button">ADD TO
+								CART</button>
+							<button class="btn btn-light" type="button">WISH LIST</button>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
@@ -137,10 +136,13 @@
 	<!-- 상품 설명 -->
 	<section id="product_info">
 		<div class="container d-flex flex-column justify-content-between">
-			<img src="https://black-up.kr/web/upload/210224_sb_nr_12pt_made_01.jpg" class="img-fluid" alt="..." /> <img
-				src="https://black-up.kr/web/upload/210224_sb_nr_12pt_made_02.gif" class="img-fluid" alt="..." /> <img
-				src="https://black-up.kr/web/upload/210224_sb_nr_12pt_made_03.jpg" class="img-fluid" alt="..." /> <img
-				src="https://black-up.kr/web/upload/210224_sb_nr_12pt_02.jpg" class="img-fluid" alt="..." />
+			<c:forEach items="${ product.imagePathList }" var="image" begin="1">
+				<img src="${ image.imgPath }" class="img-fluid" alt="..." />
+			</c:forEach>
+			<!-- <img src="https://black-up.kr/web/upload/210224_sb_nr_12pt_made_01.jpg" class="img-fluid" alt="..." /> --> 
+			<!-- <img src="https://black-up.kr/web/upload/210224_sb_nr_12pt_made_02.gif" class="img-fluid" alt="..." /> --> 
+			<!-- <img src="https://black-up.kr/web/upload/210224_sb_nr_12pt_made_03.jpg" class="img-fluid" alt="..." /> --> 
+			<!-- <img src="https://black-up.kr/web/upload/210224_sb_nr_12pt_02.jpg" class="img-fluid" alt="..." /> -->
 		</div>
 	</section>
 
@@ -152,33 +154,33 @@
 					<p>Total : 100</p>
 					<p>5 Start</p>
 					<div class="progress">
-						<div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 80%"
+						<div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: ${ product.pdGPA5 * 10 }%"
 							aria-valuemax="100">
-							80</div>
+							${ product.pdGPA5 }</div>
 					</div>
 					<p>4 Start</p>
 					<div class="progress">
-						<div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 10%"
+						<div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: ${ product.pdGPA4 * 10 }%"
 							aria-valuemax="100">
-							10</div>
+							${ product.pdGPA4 }</div>
 					</div>
 					<p>3 Start</p>
 					<div class="progress">
-						<div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 5%"
+						<div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: ${ product.pdGPA3 * 10 }%"
 							aria-valuemax="100">
-							5</div>
+							${ product.pdGPA3 }</div>
 					</div>
 					<p>2 Start</p>
 					<div class="progress">
-						<div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 0%"
+						<div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: ${ product.pdGPA2 * 10 }%"
 							aria-valuemax="100">
-							0</div>
+							${ product.pdGPA2 }</div>
 					</div>
 					<p>1 Start</p>
 					<div class="progress">
-						<div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 0%"
+						<div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: ${ product.pdGPA1 * 10 }%"
 							aria-valuemax="100">
-							0</div>
+							${ product.pdGPA1 }</div>
 					</div>
 				</div>
 			</div>
