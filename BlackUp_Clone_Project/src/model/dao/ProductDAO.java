@@ -25,6 +25,63 @@ public class ProductDAO implements Productable {
 		this.ds = ds;
 	}
 
+	// 특정 상품 하나 가져오기
+	public ProductDTO getSelectOneProduct(int pdID) {
+
+		Connection conn = null;
+		PreparedStatement stmt = null;
+		ResultSet rs = null;
+
+		try {
+			conn = ds.getConnection();
+			stmt = conn.prepareStatement("select * from product where pdID = ?");
+			stmt.setInt(1, pdID);
+			rs = stmt.executeQuery();
+			rs.next();
+
+			ArrayList<CategoryDTO> categoryList = (ArrayList<CategoryDTO>) selectOne(Set.category, rs.getInt("pdID"));
+			ArrayList<ColorSetDTO> colorSetList = (ArrayList<ColorSetDTO>) selectOne(Set.colorset, rs.getInt("pdID"));
+			ArrayList<ImagePathDTO> imagePathList = (ArrayList<ImagePathDTO>) selectOne(Set.imagepath,
+					rs.getInt("pdID"));
+			ArrayList<SizeSetDTO> sizeSetList = (ArrayList<SizeSetDTO>) selectOne(Set.sizeset, rs.getInt("pdID"));
+
+			return new ProductDTO().setPdID(rs.getInt("pdID")).setPdPrice(rs.getInt("pdPrice"))
+					.setPdName(rs.getString("pdName")).setPdGPA5(rs.getInt("pdGPA5")).setPdGPA4(rs.getInt("pdGPA4"))
+					.setPdGPA3(rs.getInt("pdGPA3")).setPdGPA2(rs.getInt("pdGPA2")).setPdGPA1(rs.getInt("pdGPA1"))
+					.setCategoryList(categoryList).setColorSetList(colorSetList).setImagePathList(imagePathList)
+					.setSizeSetList(sizeSetList);
+
+		} catch (Exception e) {
+			System.out.println("getSelectOneProduct Error!");
+			e.printStackTrace();
+		} finally {
+			try {
+				if (rs != null) {
+					rs.close();
+				}
+			} catch (Exception e2) {
+
+			}
+			try {
+				if (stmt != null) {
+					stmt.close();
+				}
+			} catch (Exception e2) {
+
+			}
+			try {
+				if (conn != null) {
+					conn.close();
+				}
+			} catch (Exception e2) {
+
+			}
+		}
+
+		return null;
+	}
+
+	// 상품 전체 가져오기
 	@Override
 	public ArrayList<ProductDTO> getProductList() {
 
@@ -86,8 +143,9 @@ public class ProductDAO implements Productable {
 		return null;
 	}
 
+	// 특정 카테고리 상품 리스트 가져오기
 	@Override
-	public ArrayList<ProductDTO> getCategoryByProduct(String cgName) {
+	public ArrayList<ProductDTO> getCategoryByProductList(String cgName) {
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
@@ -149,6 +207,7 @@ public class ProductDAO implements Productable {
 		return null;
 	}
 
+	// 특정 카테고리 타입 리스트 가져오기
 	@Override
 	public ArrayList<String> getCategoryTypeList(String cgName) {
 		Connection conn = null;
@@ -197,6 +256,7 @@ public class ProductDAO implements Productable {
 		return null;
 	}
 
+	// 특정 상품의 정보 하나를 가져오기 - pdID로
 	@Override
 	public Object selectOne(Set set, int pdID) {
 		Connection conn = null;
@@ -279,6 +339,7 @@ public class ProductDAO implements Productable {
 		return null;
 	}
 
+	// 특정 상품의 정보 하나를 가져오기 - pdName
 	@Override
 	public Object selectOne(Set set, String pdName) {
 		Connection conn = null;
@@ -361,6 +422,7 @@ public class ProductDAO implements Productable {
 		return null;
 	}
 
+	// 특정 상품 가져오기 - (상품 테이블만)
 	@Override
 	public int getProductID(String pdName) {
 		Connection conn = null;
@@ -405,6 +467,7 @@ public class ProductDAO implements Productable {
 		return -1; // 오류시 -1 반환
 	}
 
+	// 특정 상품 가져오기 - (상품 테이블만)
 	@Override
 	public String getProductName(int pdId) {
 		Connection conn = null;

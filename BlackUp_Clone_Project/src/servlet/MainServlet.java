@@ -22,12 +22,12 @@ public class MainServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		try {
 			ServletContext sc = this.getServletContext();
-			
+
 			ProductDAO productDAO = (ProductDAO) sc.getAttribute("productDAO");
-			ArrayList<ProductDTO> madeProductList  = productDAO.getCategoryByProduct("made");
-			ArrayList<ProductDTO> outerProductList  = productDAO.getCategoryByProduct("outer");
-			ArrayList<ProductDTO> pantsProductList  = productDAO.getCategoryByProduct("pants");
-			
+			ArrayList<ProductDTO> madeProductList = productDAO.getCategoryByProductList("made");
+			ArrayList<ProductDTO> outerProductList = productDAO.getCategoryByProductList("outer");
+			ArrayList<ProductDTO> pantsProductList = productDAO.getCategoryByProductList("pants");
+
 			req.setAttribute("madeList", madeProductList);
 			req.setAttribute("outerList", outerProductList);
 			req.setAttribute("pantsList", pantsProductList);
@@ -35,7 +35,7 @@ public class MainServlet extends HttpServlet {
 			resp.setContentType("text/html; charset=utf-8");
 			RequestDispatcher rd = req.getRequestDispatcher("/MainForm.jsp");
 			rd.include(req, resp);
-			
+
 		} catch (Exception e) {
 			System.out.println("main servelt 오");
 			e.printStackTrace();
