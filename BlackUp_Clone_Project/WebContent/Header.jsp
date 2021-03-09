@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	   
-	<%	
+
+<%	
 		String userID = null;
 		if(session.getAttribute("userID") != null){
 			userID = (String) session.getAttribute("userID");
@@ -53,10 +53,8 @@
 						<li><a class="dropdown-item" href="/BlackUp_Clone_Project/category?name=PANTS&type=면바지">면바지</a></li>
 					</ul>
 				</li>
-				<!-- sale -->
-				<li class="nav-item"><a class="nav-link active" aria-current="page" href="#">SALE</a></li>
 			</ul>
-			
+
 			<%
 				if(userID == null){ // 로그인이 되어 있지 않을 경우 보여지는 출력 화면
 
@@ -67,49 +65,40 @@
 				<li class="nav-item"><a class="nav-link active" aria-current="page"
 						href="/BlackUp_Clone_Project/login">LOGIN</a></li>
 				<!-- SigUp -->
-				<li class="nav-item"><a class="nav-link active" aria-current="page"
-						href="/BlackUp_Clone_Project/join">JOIN</a></li>			
+				<li class="nav-item"><a class="nav-link active" aria-current="page" href="/BlackUp_Clone_Project/join">JOIN</a>
+				</li>
 				<!-- Account -->
 				<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
 						data-bs-toggle="dropdown" aria-expanded="false">MY
 						PAGE </a>
 					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<li><a class="dropdown-item" href="#">ORDER</a></li>
-						<li><a class="dropdown-item" href="#">WISH</a></li>
-						<li>
-							<hr class="dropdown-divider" />
-						</li>
 						<li><a class="dropdown-item" href="#">ACCOUNT</a></li>
 					</ul>
 				</li>
 			</ul>
-			
+
 			<%
 			}
 			else
 			{          // 로그인이 되어 있을 경우 보여지는 출력 화면
 				
 			%>
-			
+
 			<!-- 좌측 Navar Menu -->
 			<ul class="navbar-nav mb-2 mb-lg-0">
 				<!-- LOGOUT -->
-				<li class="nav-item"><a class="nav-link active" aria-current="page" href="LogoutForm.jsp">LOGOUT</a></li>		
+				<li class="nav-item"><a class="nav-link active" aria-current="page" href="/BlackUp_Clone_Project/jsp/form/LogoutForm.jsp">LOGOUT</a></li>
 				<!-- Account -->
 				<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
 						data-bs-toggle="dropdown" aria-expanded="false">MY
 						PAGE </a>
 					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<li><a class="dropdown-item" href="#">ORDER</a></li>
-						<li><a class="dropdown-item" href="#">WISH</a></li>
-						<li>
-							<hr class="dropdown-divider" />
-						</li>
 						<li><a class="dropdown-item" href="#">ACCOUNT</a></li>
+						<li><a class="dropdown-item" href="/BlackUp_Clone_Project/modify?userID=${ userID }">정보 수정</a></li>
 					</ul>
 				</li>
 			</ul>
-			
+
 			<%
 			}
 			%>

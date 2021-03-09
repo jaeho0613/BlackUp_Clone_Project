@@ -11,7 +11,8 @@
 		session.invalidate();  // 로그인 시 속해있던 세션을 로그아웃을 통해 세션을 무효화 시키는 구문 
 	%>
 	<script>
-		location.href = 'main'; 
+	
+		location.href = '/BlackUp_Clone_Project/main'; 
 	</script>
 </body>
 </html>

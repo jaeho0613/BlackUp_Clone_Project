@@ -44,8 +44,6 @@ public class LoginServlet extends HttpServlet {
 		resp.setContentType("text/html; charset=utf-8");
 		int result = userDAO.login(req.getParameter("userID"), req.getParameter("userPassword"));
 		
-		
-		
 		if (result == 1) { // 로그인 성공 시
 			session = req.getSession();
 			session.setAttribute("userID", (req.getParameter("userID") ));  //로그인 성공한 회원에게 세션 부여 구문
