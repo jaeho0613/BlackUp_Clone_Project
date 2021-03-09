@@ -1,3 +1,5 @@
+<%@page import="model.dto.UserDTO"%>
+<%@page import="model.dao.UserDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -17,12 +19,15 @@
 	<!-- CSS -->
 	<link rel="stylesheet" href="/BlackUp_Clone_Project/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/BlackUp_Clone_Project/css/custom.css">
+	
+	
 </head>
 
 <body>
 	<!-- 헤더 영역  -->
 	<jsp:include page="../../Header.jsp"></jsp:include>
 
+	
 	<div class="container" style="padding-top:100px">
 		<div class="col-lg-4"></div>
 		<div class="col-lg-4" style="margin: auto">
@@ -32,24 +37,24 @@
 					<h3 style="text-align:center; font-weight-bold">회원정보 수정</h3>
 					<div class="form-group">
 						<br>
-						<input style="text-align" type="text" class="form-control" placeholder="아이디" name="userID" value=""
-							readonly>
+						<input style="text-align" type="text" class="form-control" placeholder="아이디" name="userID" value="${ user.userID }"
+							readonly/>
 					</div>
 					<div>
-						<input style="text-align" type="password" class="form-control" placeholder="비밀번호" name="userPassword"
-							maxlength="20" value="">
+						<input style="text-align" type="text" class="form-control" placeholder="비밀번호" name="userPassword"
+							maxlength="20" value="${ user.userPassword }"/>
 					</div>
 					<div>
-						<input style="text-align" type="text" class="form-control" placeholder="이름" name="uesrName" value=""
-							maxlength="20">
+						<input style="text-align" type="text" class="form-control" placeholder="이름" name="uesrName" value="${ user.userName }"
+							maxlength="20"/>
 					</div>
 					<div>
-						<input style="text-align" type="text" class="form-control" placeholder="주소" name="userAddress" value=""
-							maxlength="20">
+						<input style="text-align" type="text" class="form-control" placeholder="주소" name="userAddress" value="${ user.userAddress }"
+							maxlength="20"/>
 					</div>
 					<div>
-						<input style="text-align" type="text" class="form-control" placeholder="전화번호" name="userPhone" value=""
-							maxlength="20">
+						<input style="text-align" type="text" class="form-control" placeholder="전화번호" name="userPhone" value="${ user.userPhone }"
+							maxlength="20"/>
 					</div>
 					<br>
 					<div>
