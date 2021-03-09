@@ -34,7 +34,7 @@ public class CategoryServlet extends HttpServlet {
 
 			// ContextLoaderListener에서 생성한 DAO 가져오기
 			ProductDAO productDAO = (ProductDAO) sc.getAttribute("productDAO");
-			ArrayList<ProductDTO> productList = productDAO.getCategoryByProduct(cgName);
+			ArrayList<ProductDTO> productList = productDAO.getCategoryByProductList(cgName);
 			ArrayList<String> cgTypeList = productDAO.getCategoryTypeList(cgName);
 
 			// 가져온 ProductList 출력
@@ -103,7 +103,7 @@ public class CategoryServlet extends HttpServlet {
 		} catch (Exception e) {
 			req.setAttribute("error", e);
 			RequestDispatcher rd = req.getRequestDispatcher("/Error.jsp");
-			rd.forward(req,resp);
+			rd.forward(req, resp);
 		}
 	}
 

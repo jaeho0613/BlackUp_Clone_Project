@@ -4,6 +4,9 @@ insert into colorset  values('1','민트','#9BA88A');
 insert into colorset  values('1','블랙','#000000');
 insert into category  values('1','made','상의');
 insert into imagepath values('1','https://black-up.kr/web/product/small/202103/2cf8cf432657446e3a483c5815dc932e.webp','아무거나(아직사용X)');
+insert into imagepath values('1','https://black-up.kr/web/upload/210304_ya_michelle_intro.jpg','아무거나(아직사용X)');
+insert into imagepath values('1','https://black-up.kr/web/upload/210302_sb_je_1out_01.jpg','아무거나(아직사용X)');
+insert into imagepath values('1','https://black-up.kr/web/upload/210302_sb_je_1out_02.jpg','아무거나(아직사용X)');
 
 insert into product   values('2',22800,'그리즈 크롭 가디건',0,0,0,0,0);
 insert into colorset  values('2','스카이블루','#BACBE8');

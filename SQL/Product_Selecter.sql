@@ -7,14 +7,21 @@ from product join colorset on product.pdID = colorset.pdID
              
 -- 카테고리 정보
 select distinct * from imagepath where cgName = 'made';
+
+-- 특정 상품 하나만 가져오기 (모든 정보)
+select *
+from product
+where pdID = 1;
              
 -- 특정 카테고리 상품 가져오기
-select pdID, pdPrice, pdName
+select *
 from product
 where product.pdID in (select pdID
 from category
 where cgName = 'made'
 );
+
+select * from product where pdID like ?;
 
 -- pdID로 각 테이블 검사
 select * from colorset where pdID like ( select pdID from product where pdID like 1 );
