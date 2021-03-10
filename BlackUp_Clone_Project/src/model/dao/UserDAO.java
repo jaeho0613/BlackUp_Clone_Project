@@ -70,7 +70,6 @@ public class UserDAO implements Userable {
 		} catch (Exception e) {
 			System.out.println("UserDAO insert 오류입니다.");
 			e.printStackTrace();
-			;
 		} finally {
 			try {
 				if (stmt != null) {

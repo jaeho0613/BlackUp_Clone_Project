@@ -1,8 +1,6 @@
 package servlet;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -15,9 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import com.google.gson.Gson;
-
+import model.dao.OrderDAO;
 import model.dto.KakaoPayReadDTO;
 import model.dto.OrdersDTO;
 
@@ -39,8 +35,9 @@ public class KakaoPayApprovalServlet extends HttpServlet {
 			KakaoPayReadDTO ready = (KakaoPayReadDTO) sc.getAttribute("ready");
 
 			if (ready != null) {
-				// JSON 파싱 객체
-				Gson gson = new Gson();
+				
+				// 데이터 베이스에 저장할 DAO 객체
+				OrderDAO orderDAO = (OrderDAO) sc.getAttribute("orderDAO");
 
 				// 저장소에서 주문 정보 가져오기
 				OrdersDTO order = (OrdersDTO) sc.getAttribute("order");
@@ -73,9 +70,10 @@ public class KakaoPayApprovalServlet extends HttpServlet {
 
 				// 전달 Parameter를 전송하여 API 통신
 				conn.getOutputStream().write(string_params.getBytes());
-				BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+				// BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
 
 				// ORDER 데이터 베이스에 추가
+				orderDAO.insert(order);
 
 				// 결제 성공시 Popup창 닫기
 				PrintWriter wr = resp.getWriter();

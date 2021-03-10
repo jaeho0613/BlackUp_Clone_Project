@@ -7,6 +7,8 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 import javax.sql.DataSource;
+
+import model.dao.OrderDAO;
 import model.dao.ProductDAO;
 import model.dao.UserDAO;
 import model.dto.UserDTO;
@@ -29,6 +31,9 @@ public class ContextLoaderListener implements ServletContextListener {
 			UserDAO userDAO = new UserDAO();
 			userDAO.setDataSource(ds);
 
+			OrderDAO orderDAO = new OrderDAO();
+			orderDAO.setDataSource(ds);
+
 			// 연결 테스트 출력
 //			 UserDTO userDTO = userDAO.selectOne("wind2104");
 //			 System.out.println(userDTO.getUserID());
@@ -44,6 +49,7 @@ public class ContextLoaderListener implements ServletContextListener {
 			// 서버 실행시 DAO 객체 저장
 			sc.setAttribute("productDAO", productDAO);
 			sc.setAttribute("userDAO", userDAO);
+			sc.setAttribute("orderDAO", orderDAO);
 
 		} catch (Exception e) {
 

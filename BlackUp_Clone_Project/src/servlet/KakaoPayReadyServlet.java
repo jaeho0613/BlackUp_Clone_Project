@@ -57,8 +57,13 @@ public class KakaoPayReadyServlet extends HttpServlet {
 			 System.out.println(userID);
 
 			// 주문 데이터 객체 생성
-			OrdersDTO order = new OrdersDTO().setColor(color).setPdPrice(Integer.parseInt(pdPrice))
-					.setPdID(Integer.parseInt(pdId)).setSize(size).setColor(color).setUserID(userID);
+			OrdersDTO order = new OrdersDTO()
+					.setPdName(pdName)
+					.setPdPrice(Integer.parseInt(pdPrice))
+					.setPdID(Integer.parseInt(pdId))
+					.setSize(size)
+					.setColor(color)
+					.setUserID(userID);
 
 			// API 통신 헤더 설정
 			URL url = new URL("https://kapi.kakao.com/v1/payment/ready");
@@ -93,7 +98,7 @@ public class KakaoPayReadyServlet extends HttpServlet {
 			conn.getOutputStream().write(string_params.getBytes());
 			in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
 
-			// 결제 정보 객체 생성
+			// 결제 준비 정보 객체 생성
 			KakaoPayReadDTO ready = gson.fromJson(in, KakaoPayReadDTO.class);
 
 			// 최상위 저장소에 저장
