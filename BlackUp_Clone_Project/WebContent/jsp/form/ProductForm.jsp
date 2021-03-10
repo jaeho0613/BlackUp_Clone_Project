@@ -133,6 +133,7 @@
 						<input type="hidden" name="pdId" value="null" />
 						<input type="hidden" name="size" value="null" />
 						<input type="hidden" name="color" value="null" />
+						<input type="hidden" name="userID" value="null" />
 					</form>
 				</div>
 			</div>
@@ -188,9 +189,10 @@
 
 <script>
 	function sendPost() {
-		var userName = "${userID}";
+		var userID = "${userID}";
 
-		if (userName != "") {
+		// 로그인 상태 검사
+		if (userID != "") {
 
 			var newForm = document.createElement('form');
 			newForm.name = "KakaoPay";
@@ -214,23 +216,24 @@
 			document.getElementsByName('pdId')[0].value = pdId;
 			document.getElementsByName('size')[0].value = sizeVal;
 			document.getElementsByName('color')[0].value = colorVal;
+			document.getElementsByName('userID')[0].value = userID;
 
 			// 상품 정보 출력
-			console.log(document.getElementsByName('pdName')[0].value);
-			console.log(document.getElementsByName('pdPrice')[0].value);
-			console.log(document.getElementsByName('pdId')[0].value);
-			console.log(document.getElementsByName('size')[0].value);
-			console.log(document.getElementsByName('color')[0].value);
-			console.log(userName);
+			console.log("pdName : " + document.getElementsByName('pdName')[0].value);
+			console.log("pdPrice : " + document.getElementsByName('pdPrice')[0].value);
+			console.log("pdId : " + document.getElementsByName('pdId')[0].value);
+			console.log("size : " + document.getElementsByName('size')[0].value);
+			console.log("color : " + document.getElementsByName('color')[0].value);
+			console.log("userID : " + document.getElementsByName('userID')[0].value);
 
-			var name = "kakaoPay"
+			// Popup 설정
+			var title = "kakaoPay"
 			var option = "width = 500, height = 500, top = 100, left = 200, location = no";
-			var gsWin = window.open("", name, option);
+			var gsWin = window.open("", title, option);
 			var frm = document.payData;
-			frm.target = name;
+			frm.target = title;
 			frm.action = "/BlackUp_Clone_Project/payment/ready";
 			frm.submit();
-
 		} else {
 			alert("로그인이 필요합니다.");
 		}

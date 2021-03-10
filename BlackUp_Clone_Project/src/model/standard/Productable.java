@@ -13,7 +13,6 @@ public interface Productable {
 	
 	// 특정 카테고리 타입으로 상품 리스트 가져오기
 	ArrayList<ProductDTO> getCategoryTypeByProductList(String cgType);
-	
 
 	// 특정 상품 하나 가져오기
 	ProductDTO getSelectOneProduct(int pdID);
