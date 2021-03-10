@@ -119,6 +119,71 @@ insert into imagepath values('12','https://black-up.kr/web/upload/191118_sb_1bl_
 insert into imagepath values('12','https://black-up.kr/web/upload/191118_sb_3bl.jpg','아무거나(아직사용X)');
 insert into imagepath values('12','https://black-up.kr/web/upload/191118_sb_2bl_01.jpg','아무거나(아직사용X)');
 
+-- [ Pants - 슬랙스 ]
+insert into product   values(11,29000,'도미닉 와이드 롱 슬랙스',0,0,0,0,0);
+insert into colorset  values(11,'그레이','#A9A9A9');
+insert into colorset  values(11,'블랙','#000000');
+insert into sizeset   values(11,'S');
+insert into sizeset   values(11,'M');
+insert into sizeset   values(11,'L');
+insert into sizeset   values(11,'XL');
+insert into category  values(11,'pants','슬랙스');
+insert into imagepath values(11,'https://black-up.kr/web/product/medium/201904/12ae351a745802cbdf0ff37910930b67.gif','아무거나(아직사용X)');
+insert into imagepath values(11,'https://black-up.kr/web/upload/190411_sb_24ptmade_01.jpg','아무거나(아직사용X)');
+insert into imagepath values(11,'https://black-up.kr/web/upload/200213-DetailModify.jpg','아무거나(아직사용X)');
+insert into imagepath values(11,'https://black-up.kr/web/upload/190411_sb_24pt_01.jpg','아무거나(아직사용X)');
+
+insert into product   values(12,29000,'롤리 SET - 와이드 슬랙스',0,0,0,0,0);
+insert into colorset  values(12,'차콜','#474747');
+insert into colorset  values(12,'블랙','#000000');
+insert into sizeset   values(12,'free');
+insert into category  values(12,'pants','슬랙스');
+insert into imagepath values(12,'https://black-up.kr/web/product/small/20200312/40b2eade95d66ada617ef80690cc544f.webp','아무거나(아직사용X)');
+insert into imagepath values(12,'https://black-up.kr/web/upload/200311_ya_26pt_intro_01.jpg','아무거나(아직사용X)');
+insert into imagepath values(12,'https://black-up.kr/web/upload/200311_ya_26pt_intro_03.jpg','아무거나(아직사용X)');
+insert into imagepath values(12,'https://black-up.kr/web/upload/200311_ya_26pt_01.jpg','아무거나(아직사용X)');
+
+insert into product   values(13, 29000,'도미닉 롱 슬랙스',0,0,0,0,0);
+insert into colorset  values(13,'베이지','#C7B082');
+insert into colorset  values(13,'차콜','#474747');
+insert into colorset  values(13,'블랙','#000000');
+insert into colorset  values(13,'딥베이지','#946F43');
+insert into colorset  values(13,'카키','#45703F');
+insert into sizeset   values(13,'XS');
+insert into sizeset   values(13,'S');
+insert into sizeset   values(13,'M');
+insert into sizeset   values(13,'L');
+insert into sizeset   values(13,'XL');
+insert into category  values(13,'pants','슬랙스');
+insert into imagepath values(13,'https://black-up.kr/web/product/small/201911/0e26629d91d50f38ab850ec5bb3d9cb1.gif','아무거나(아직사용X)');
+insert into imagepath values(13,'https://black-up.kr/web/upload/201127-jw-dominic-intro.jpg','아무거나(아직사용X)');
+insert into imagepath values(13,'https://black-up.kr/web/upload/170830_n5_pt_01.jpg','아무거나(아직사용X)');
+insert into imagepath values(13,'https://black-up.kr/web/upload/170830_n5_pt_02.jpg','아무거나(아직사용X)');
+
+insert into product   values(14,22000,'빌런드 핀턱 슬랙스',0,0,0,0,0);
+insert into colorset  values(14,'베이지','#C2B099');
+insert into colorset  values(14,'브라운','#63584F');
+insert into colorset  values(14,'블랙','#000000');
+insert into sizeset   values(14,'S');
+insert into sizeset   values(14,'M');
+insert into sizeset   values(14,'L');
+insert into category  values(14,'pants','슬랙스');
+insert into imagepath values(14,'https://black-up.kr/web/product/small/202010/494bf94e80890702bed9f5309762b640.webp','아무거나(아직사용X)');
+insert into imagepath values(14,'https://black-up.kr/web/upload/201013_sb_11pt_01.jpg','아무거나(아직사용X)');
+insert into imagepath values(14,'https://black-up.kr/web/upload/201013_sb_11pt_02.jpg','아무거나(아직사용X)');
+insert into imagepath values(14,'https://black-up.kr/web/upload/201013_sb_11pt_03.jpg','아무거나(아직사용X)');
+
+insert into product   values(15,32000,'체리시 SET - 와이드 슬랙스',0,0,0,0,0);
+insert into colorset  values(15,'브라운','#501704');
+insert into colorset  values(15,'블랙','#000000');
+insert into sizeset   values(15,'S');
+insert into sizeset   values(15,'M');
+insert into sizeset   values(15,'L');
+insert into category  values(15,'pants','슬랙스');
+insert into imagepath values(15,'https://black-up.kr/web/product/small/20200203/9e8d819decb44820c7c14201bbeab994.webp','아무거나(아직사용X)');
+insert into imagepath values(15,'https://black-up.kr/web/upload/2002_cherishi_pt_intro_01.jpg','아무거나(아직사용X)');
+insert into imagepath values(15,'https://black-up.kr/web/upload/200129_hi_je23_1_pt_01.jpg','아무거나(아직사용X)');
+insert into imagepath values(15,'https://black-up.kr/web/upload/200129_hi_je23_1_pt_02.jpg','아무거나(아직사용X)');
 
 -- [ Made - 하의 ]
 insert into product   values('13',55100,'재너 데님 원피스',0,0,0,0,0);

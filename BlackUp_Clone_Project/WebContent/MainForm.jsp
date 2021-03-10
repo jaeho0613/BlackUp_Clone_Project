@@ -37,24 +37,18 @@ uri="http://java.sun.com/jsp/jstl/core"%>
           aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
           aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-          aria-label="Slide 4"></button>
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="https://black-up.kr/web/upload/yangji_pc_crumb/210305-main01.jpg" class="d-block w-100"
+          <img src="https://black-up.kr/web/upload/yangji_pc_crumb/210309-main01.jpg" class="d-block w-100"
             alt="main_img" />
         </div>
         <div class="carousel-item">
-          <img src="https://black-up.kr/web/upload/yangji_pc_crumb/210305-main02.jpg" class="d-block w-100"
+          <img src="https://black-up.kr/web/upload/yangji_pc_crumb/210309-main02.jpg" class="d-block w-100"
             alt="main_img" />
         </div>
         <div class="carousel-item">
-          <img src="https://black-up.kr/web/upload/yangji_pc_crumb/210305-main03.jpg" class="d-block w-100"
-            alt="main_img" />
-        </div>
-        <div class="carousel-item">
-          <img src="https://black-up.kr/web/upload/yangji_pc_crumb/210305-main04.jpg" class="d-block w-100"
+          <img src="https://black-up.kr/web/upload/yangji_pc_crumb/210309-main03.jpg" class="d-block w-100"
             alt="main_img" />
         </div>
       </div>
