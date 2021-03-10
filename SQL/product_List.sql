@@ -162,7 +162,10 @@ insert into sizeset   values(15,'S');
 insert into sizeset   values(15,'M');
 insert into sizeset   values(15,'L');
 insert into category  values(15,'pants','슬랙스');
-insert into imagepath values(15,'//black-up.kr/web/product/small/20200203/9e8d819decb44820c7c14201bbeab994.webp','아무거나(아직사용X)');
+insert into imagepath values(15,'https://black-up.kr/web/product/small/20200203/9e8d819decb44820c7c14201bbeab994.webp','아무거나(아직사용X)');
+insert into imagepath values(15,'https://black-up.kr/web/upload/2002_cherishi_pt_intro_01.jpg','아무거나(아직사용X)');
+insert into imagepath values(15,'https://black-up.kr/web/upload/200129_hi_je23_1_pt_01.jpg','아무거나(아직사용X)');
+insert into imagepath values(15,'https://black-up.kr/web/upload/200129_hi_je23_1_pt_02.jpg','아무거나(아직사용X)');
 
 -- [ Pants - 면바지 ]
 insert into product   values(16,37000,'카트치 슬림일자 코튼 팬츠',0,0,0,0,0);
