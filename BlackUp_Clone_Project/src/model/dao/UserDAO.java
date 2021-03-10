@@ -183,6 +183,7 @@ public class UserDAO implements Userable {
 	}
 
 	// 로그인 기능 메소드
+	@Override
 	public int login(String userID, String userPassword) {
 		Connection conn; // DB에 접근하는 객체
 		PreparedStatement stmt; // SQL문을 실행하는 객체를 반환

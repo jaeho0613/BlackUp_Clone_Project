@@ -10,29 +10,33 @@ import model.dto.ProductDTO;
 import model.dto.SizeSetDTO;
 
 public interface Productable {
+	
+	// 특정 카테고리 타입으로 상품 리스트 가져오기
+	ArrayList<ProductDTO> getCategoryTypeByProductList(String cgType);
+	
 
-	// 특정 상품 하나의 전체 정보 가져오기
+	// 특정 상품 하나 가져오기
 	ProductDTO getSelectOneProduct(int pdID);
 
-	// 특정 카테고리 타입 가져오기
+	// 특정 카테고리 타입 리스트 가져오기
 	ArrayList<String> getCategoryTypeList(String cgName);
 
 	// 상품 전체 가져오기
 	ArrayList<ProductDTO> getProductList();
 
-	// 카테고리별 상품 정보 가져오기
+	// 특정 카테고리 이름 상품 리스트 가져오기
 	ArrayList<ProductDTO> getCategoryByProductList(String cgName);
 
-	// 상품 정보 가져오기 - pdID
+	// 특정 상품 가져오기 - (상품 테이블만)
 	int getProductID(String pdName);
 
-	// 상품 정보 가져오기 - pdName
+	// 특정 상품 가져오기 - (상품 테이블만)
 	String getProductName(int pdId);
 
-	// 특정 상품 가져오기 - 아이디로
+	// 특정 상품의 정보 하나를 가져오기 - pdID로
 	Object selectOne(Set set, int pdID);
 
-	// 특정 상품 가져오기 - 상품명으로
+	// 특정 상품의 정보 하나를 가져오기 - pdName
 	Object selectOne(Set set, String pdName);
 
 	// 특정 상품 삭제

@@ -26,6 +26,7 @@ public class ProductDAO implements Productable {
 	}
 
 	// 특정 상품 하나 가져오기
+	@Override
 	public ProductDTO getSelectOneProduct(int pdID) {
 
 		Connection conn = null;
@@ -143,7 +144,7 @@ public class ProductDAO implements Productable {
 		return null;
 	}
 
-	// 특정 카테고리 상품 리스트 가져오기
+	// 특정 카테고리 이름 상품 리스트 가져오기
 	@Override
 	public ArrayList<ProductDTO> getCategoryByProductList(String cgName) {
 		Connection conn = null;
@@ -512,9 +513,62 @@ public class ProductDAO implements Productable {
 		return null; // 오류시 null 반환
 	}
 
+	// 특정 상품 삭제
 	@Override
 	public int delete(int pdID) {
-
 		return 0;
+	}
+
+	// 특정 카테고리 이름으로 상품 가져오기
+
+	@Override
+	public ArrayList<ProductDTO> getCategoryTypeByProductList(String cgType) {
+		Connection conn = null;
+		PreparedStatement stmt = null;
+		ResultSet rs = null;
+		ArrayList<ProductDTO> productList = new ArrayList<ProductDTO>();
+		String sql = "select pdID " + "from product " + "where pdID in "
+				+ "(select pdID from category where cgType like ?)";
+
+		try {
+			conn = ds.getConnection();
+			stmt = conn.prepareStatement(sql);
+			stmt.setString(1, cgType);
+			rs = stmt.executeQuery();
+
+			while (rs.next()) {
+				productList.add(getSelectOneProduct(rs.getInt("pdID")));
+			}
+
+			return productList;
+
+		} catch (Exception e) {
+			System.out.println("ProductDAO getCategoryTypeByProductList Error!");
+			e.printStackTrace();
+		} finally {
+			try {
+				if (rs != null) {
+					rs.close();
+				}
+			} catch (Exception e2) {
+
+			}
+			try {
+				if (stmt != null) {
+					stmt.close();
+				}
+			} catch (Exception e2) {
+
+			}
+			try {
+				if (conn != null) {
+					conn.close();
+				}
+			} catch (Exception e2) {
+
+			}
+		}
+
+		return null;
 	}
 }

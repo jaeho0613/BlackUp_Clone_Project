@@ -36,8 +36,17 @@
 			<ul class="nav justify-content-center">
 				<c:forEach var="type" items="${ cgTypeList }">
 					<li class="nav-item">
-						<a class="nav-link" href="<%= request.getRequestURI() %>?name=${cgName}&type=${ type }"
-							style="color: #000000">${ type }</a></li>
+						<c:choose>
+							<c:when test="${ type == cgType }">
+								<a class="nav-link bg-dark text-white"
+									href="<%= request.getRequestURI() %>?name=${cgName}&type=${ type }">${ type }</a>
+							</c:when>
+							<c:otherwise>
+								<a class="nav-link" href="<%= request.getRequestURI() %>?name=${cgName}&type=${ type }"
+									style="color: #000000">${ type }</a>
+							</c:otherwise>
+						</c:choose>
+					</li>
 				</c:forEach>
 			</ul>
 		</div>

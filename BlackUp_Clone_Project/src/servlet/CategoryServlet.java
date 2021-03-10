@@ -31,10 +31,11 @@ public class CategoryServlet extends HttpServlet {
 
 			// 카테고리 이름 (대문자로 변경)
 			String cgName = req.getParameter("name").toUpperCase();
+			String cgType = req.getParameter("type");
 
 			// ContextLoaderListener에서 생성한 DAO 가져오기
 			ProductDAO productDAO = (ProductDAO) sc.getAttribute("productDAO");
-			ArrayList<ProductDTO> productList = productDAO.getCategoryByProductList(cgName);
+			ArrayList<ProductDTO> productList = productDAO.getCategoryTypeByProductList(cgType);
 			ArrayList<String> cgTypeList = productDAO.getCategoryTypeList(cgName);
 
 			// 가져온 ProductList 출력
@@ -80,13 +81,10 @@ public class CategoryServlet extends HttpServlet {
 				System.out.println();
 			}
 
-			// JSP에서 사용하기 위해 request 저장소에 저장 - productList
+			// JSP에서 사용하기 위해 request 저장소에 저장
 			req.setAttribute("productList", productList);
-
-			// JSP에서 사용하기 위해 request 저장소에 저장 - cgName
 			req.setAttribute("cgName", cgName);
-
-			// JSP에서 사용하기 위해 request 저장소에 저장 - cgName
+			req.setAttribute("cgType", cgType);
 			req.setAttribute("cgTypeList", cgTypeList);
 
 			resp.setContentType("text/html; charset=utf-8");

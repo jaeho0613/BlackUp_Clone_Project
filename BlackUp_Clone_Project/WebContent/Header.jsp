@@ -29,7 +29,6 @@
 					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<li><a class="dropdown-item" href="/BlackUp_Clone_Project/category?name=MADE&type=상의">상의</a></li>
 						<li><a class="dropdown-item" href="/BlackUp_Clone_Project/category?name=MADE&type=하의">하의</a></li>
-						<li><a class="dropdown-item" href="/BlackUp_Clone_Project/category??name=MADE&type=기타">기타</a></li>
 					</ul>
 				</li>
 				<!-- OUTER -->
