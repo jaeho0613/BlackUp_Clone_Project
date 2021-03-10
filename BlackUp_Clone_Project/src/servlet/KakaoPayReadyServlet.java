@@ -9,6 +9,7 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -22,12 +23,26 @@ import model.dto.KakaoPayReadDTO;
 
 @SuppressWarnings("serial")
 @WebServlet("/payment/ready")
-public class KakaoPayReadyServlet extends HttpServlet{
-	
+public class KakaoPayReadyServlet extends HttpServlet {
+
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		ServletContext sc = this.getServletContext();
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		req.setCharacterEncoding("utf-8");
+		resp.setContentType("text/html; charset=utf-8");
 		
+		ServletContext sc = this.getServletContext();
+
+		String pdName = req.getParameter("pdName");
+		String pdPrice = req.getParameter("pdPrice");
+		String pdId = req.getParameter("pdId");
+		String size = req.getParameter("size");
+		String color = req.getParameter("color");
+		System.out.println(pdName);
+		System.out.println(pdPrice);
+		System.out.println(pdId);
+		System.out.println(size);
+		System.out.println(color);
+
 		System.out.println("ready GET");
 		Gson gson = new Gson();
 		URL url = new URL("https://kapi.kakao.com/v1/payment/ready");
@@ -37,7 +52,7 @@ public class KakaoPayReadyServlet extends HttpServlet{
 		conn.setRequestProperty("Content-type", "application/x-www-form-urlencoded;charset=utf-8");
 		conn.setDoInput(true);
 		conn.setDoOutput(true);
-		
+
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("cid", "TC0ONETIME");
 		params.put("partner_order_id", "partner_order_id");
@@ -50,25 +65,24 @@ public class KakaoPayReadyServlet extends HttpServlet{
 		params.put("approval_url", "http://localhost:8080/BlackUp_Clone_Project/approval");
 		params.put("fail_url", "\"http://localhost:8080/BlackUp_Clone_Project/fail");
 		params.put("cancel_url", "\"http://localhost:8080/BlackUp_Clone_Project/cancel");
-		
+
 		String string_params = new String();
 		for (Map.Entry<String, String> elem : params.entrySet()) {
 			string_params += (elem.getKey() + "=" + elem.getValue() + "&");
 		}
-		
+
 		conn.getOutputStream().write(string_params.getBytes());
 		BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
 		// System.out.println(in.readLine());
-		
+
 		KakaoPayReadDTO ready = gson.fromJson(in, KakaoPayReadDTO.class);
 		System.out.println(ready.getNext_redirect_pc_url());
 		sc.setAttribute("ready", ready);
 		
-		PrintWriter wr = resp.getWriter();
-		wr.println("<script>");
-		wr.println("location.href=" + "'"+ready.getNext_redirect_pc_url()+"'");
-		wr.println("</script>");
-		wr.close();
-		
+		resp.sendRedirect(ready.getNext_redirect_pc_url() + "?" + "pdName=" + pdName + "&"
+																+ "pdPrice=" + pdPrice + "&"
+																+ "pdId=" + pdId + "&"
+																+ "size=" + size + "&"
+																+ "color=" + color + "&");
 	}
 }

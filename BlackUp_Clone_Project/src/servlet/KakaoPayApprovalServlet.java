@@ -28,6 +28,8 @@ public class KakaoPayApprovalServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setCharacterEncoding("utf-8");
+		resp.setContentType("text/html; charset=utf-8");
+		
 		System.out.println("Approval GET");
 		ServletContext sc = this.getServletContext();
 
@@ -60,7 +62,7 @@ public class KakaoPayApprovalServlet extends HttpServlet {
 			BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
 
 			KakaoApproveDTO approve = gson.fromJson(in, KakaoApproveDTO.class);
-			System.out.println(approve.getItem_name());
+			System.out.println(approve.getAmount().getPoint());
 
 			PrintWriter wr = resp.getWriter();
 			wr.println("<script>");

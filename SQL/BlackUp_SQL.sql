@@ -2,6 +2,16 @@ drop database if exists blackup;
 create database BlackUp;
 use BlackUp;
 
+create table Orders(
+	odID int primary key auto_increment comment '주문 번호',
+    userID varchar(20) not null comment '유저 아이디',
+    pdID int not null comment '상품 번호',
+    pdName varchar(64) not null comment '상품 이름',
+    pdPrice int not null comment '상품 금액',
+    Color varchar(20) comment '상품 색상',
+    Size varchar(10) comment'상품 사이즈'
+);
+
 create table User(
 	userID varchar(20) not null comment '유저 아이디',     
 	userRating int not null comment '유저 등급',

@@ -78,10 +78,10 @@
 								<th scope="row">Size</th>
 								<td class="text-start">
 									<div class="d-flex justify-content-end">
-										<select class="form-select form-select-sm" aria-label=".form-select-sm example">
-											<option selected>-[필수] 옵션을 선택해 주세요 -</option>
+										<select id="sizes" class="form-select form-select-sm" aria-label=".form-select-sm example">
+											<option value="null" selected>-[필수] 옵션을 선택해 주세요 -</option>
 											<c:forEach items="${ product.sizeSetList }" var="sizeSet" varStatus="vs">
-												<option value="${ vs.index }">${ sizeSet.size }</option>
+												<option value="${ sizeSet.size }">${ sizeSet.size }</option>
 											</c:forEach>
 										</select>
 									</div>
@@ -91,10 +91,10 @@
 								<th scope="row">Color</th>
 								<td class="text-start">
 									<div class="d-flex justify-content-end">
-										<select class="form-select form-select-sm" aria-label=".form-select-sm example">
-											<option selected>-[필수] 옵션을 선택해 주세요 -</option>
+										<select id="colors" class="form-select form-select-sm" aria-label=".form-select-sm example">
+											<option value="null" selected>-[필수] 옵션을 선택해 주세요 -</option>
 											<c:forEach items="${ product.colorSetList }" var="colorSet" varStatus="vs">
-												<option value="${ vs.index }">${ colorSet.color }</option>
+												<option value="${ colorSet.color }">${ colorSet.color }</option>
 											</c:forEach>
 										</select>
 									</div>
@@ -121,13 +121,19 @@
 					</table>
 					<!-- 상품 버튼 -->
 					<div class="d-grid gap-3 justify-content-center">
-						<button class="btn btn-dark" type="button" onclick="window.open(
-					        '/BlackUp_Clone_Project/payment/ready',
-					        'pop',
-					        'width=400,height=485, scrollbars=yes, resizable=yes');">BUY NOW</button>
+						<button class="btn btn-dark" type="button" onclick="sendPost()">BUY NOW</button>
 						<button class="btn btn-secondary" type="button">ADD TO CART</button>
 						<button class="btn btn-light" type="button">WISH LIST</button>
 					</div>
+
+					<!-- 숨겨진 Form -->
+					<form name="payData" id="payData" method="post">
+						<input type="hidden" name="pdName" value="null" />
+						<input type="hidden" name="pdPrice" value="null" />
+						<input type="hidden" name="pdId" value="null" />
+						<input type="hidden" name="size" value="null" />
+						<input type="hidden" name="color" value="null" />
+					</form>
 				</div>
 			</div>
 		</div>
@@ -179,5 +185,56 @@
 
 	<jsp:include page="../../Footer.jsp"></jsp:include>
 </body>
+
+<script>
+	function sendPost() {
+		var userName = "${userID}";
+
+		if (userName != "") {
+
+			var newForm = document.createElement('form');
+			newForm.name = "KakaoPay";
+			newForm.method = "post";
+			newForm.action = "/BlackUp_Clone_Project/payment/ready";
+
+			// 엘리먼트로 가져오기
+			var size = document.getElementById("sizes");
+			var color = document.getElementById("colors");
+
+			// 상품 정보 (DB 저장, Pay 요청 데이터)
+			var pdName = "${ product.pdName }";
+			var pdPrice = "${product.pdPrice}";
+			var pdId = "${product.pdID}";
+			var sizeVal = size.options[size.selectedIndex].value;
+			var colorVal = color.options[color.selectedIndex].value;
+
+			// 상품 정보 hidden form에 등록
+			document.getElementsByName('pdName')[0].value = pdName;
+			document.getElementsByName('pdPrice')[0].value = pdPrice;
+			document.getElementsByName('pdId')[0].value = pdId;
+			document.getElementsByName('size')[0].value = sizeVal;
+			document.getElementsByName('color')[0].value = colorVal;
+
+			// 상품 정보 출력
+			console.log(document.getElementsByName('pdName')[0].value);
+			console.log(document.getElementsByName('pdPrice')[0].value);
+			console.log(document.getElementsByName('pdId')[0].value);
+			console.log(document.getElementsByName('size')[0].value);
+			console.log(document.getElementsByName('color')[0].value);
+			console.log(userName);
+
+			var name = "kakaoPay"
+			var option = "width = 500, height = 500, top = 100, left = 200, location = no";
+			var gsWin = window.open("", name, option);
+			var frm = document.payData;
+			frm.target = name;
+			frm.action = "/BlackUp_Clone_Project/payment/ready";
+			frm.submit();
+
+		} else {
+			alert("로그인이 필요합니다.");
+		}
+	}
+</script>
 
 </html>
