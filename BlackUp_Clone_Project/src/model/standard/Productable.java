@@ -10,7 +10,7 @@ import model.dto.ProductDTO;
 import model.dto.SizeSetDTO;
 
 public interface Productable {
-	
+
 	// 특정 상품 하나의 전체 정보 가져오기
 	ProductDTO getSelectOneProduct(int pdID);
 

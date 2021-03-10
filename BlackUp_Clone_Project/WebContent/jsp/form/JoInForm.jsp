@@ -15,12 +15,9 @@ pageEncoding="UTF-8"%>
   <!-- CSS -->
   <link rel="stylesheet" href="/BlackUp_Clone_Project/css/bootstrap.min.css">
   <link rel="stylesheet" href="/BlackUp_Clone_Project/css/custom.css">
-  
-  	<!-- Join CSS -->
-	<link rel="stylesheet" href=/BlackUp_Clone_Project/css/join.css">
-  
 
-  <title>JoInForm</title>
+  <!-- Join CSS -->
+  <link rel="stylesheet" href=/BlackUp_Clone_Project/css/join.css"> <title>JoInForm</title>
 </head>
 
 <body>
@@ -70,7 +67,8 @@ pageEncoding="UTF-8"%>
                   caret-color: transparent !important;
                   margin: 10px 0px 10px 0px;
                 " />
-            <input class="btn btn-secondary" type="button" id="button" value="주소 검색" style="margin-top: 10px" onclick="goPopup()" />
+            <input class="btn btn-secondary" type="button" id="button" value="주소 검색" style="margin-top: 10px"
+              onclick="goPopup()" />
           </div>
           <input type="submit" class="btn btn-primary form-control" style="background-color: black; border-color: black"
             value="회원가입" />

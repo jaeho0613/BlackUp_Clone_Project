@@ -59,8 +59,8 @@
 						<%-- :<P>${ vs.index * 5 + 4 }</P> --%>
 						<%-- <p>${ vs2.last }</p> --%>
 						<div class="card border-0">
-						<a href="/BlackUp_Clone_Project/product?pdID=${ product.pdID }">
-							<img src="${ product.imagePathList[0].imgPath }" class="card-img-top" alt="..." /></a>
+							<a href="/BlackUp_Clone_Project/product?pdID=${ product.pdID }">
+								<img src="${ product.imagePathList[0].imgPath }" class="card-img-top" alt="..." /></a>
 							<div class="card-body">
 								<!-- 상품 정보 -->
 								<p class="text-center">${ product.pdName }</p>
@@ -68,7 +68,8 @@
 								<!-- 컬러 셋 -->
 								<div class="colors d-flex align-items-center justify-content-center mt-1">
 									<c:forEach var="color" items="${product.colorSetList }" varStatus="cs">
-										<span class="border border-light" style="background-color: ${product.colorSetList[cs.index].colorCode}"></span>
+										<span class="border border-light"
+											style="background-color: ${product.colorSetList[cs.index].colorCode}"></span>
 									</c:forEach>
 								</div>
 							</div>

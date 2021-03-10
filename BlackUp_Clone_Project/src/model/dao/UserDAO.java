@@ -140,7 +140,7 @@ public class UserDAO implements Userable {
 			conn = ds.getConnection();
 			stmt = conn.prepareStatement(
 					"update user set userRating = ?, userPassword = ?, userPasswordHash = ?, userName = ?,"
-										 + " userAddress = ?, userPhone = ?, userSex = ? where userID = ?");
+							+ " userAddress = ?, userPhone = ?, userSex = ? where userID = ?");
 
 			stmt.setInt(1, userDTO.getUserRating());
 			stmt.setString(2, userDTO.getUserPassword());

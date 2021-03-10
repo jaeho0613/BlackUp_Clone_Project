@@ -49,16 +49,10 @@ public class ModifyServlet extends HttpServlet {
 		ServletContext sc = this.getServletContext();
 
 		UserDAO userDAO = (UserDAO) sc.getAttribute("userDAO");
-		userDAO.update(new UserDTO()
-				.setUserID(req.getParameter("userID"))
-				.setUserAddress(req.getParameter("userAddress"))
-				.setUserPassword(req.getParameter("userPassword"))
-				.setUserPasswordHash(req.getParameter("userPassword"))
-				.setUserPhone(req.getParameter("userPhone"))
-				.setUserRating(0)
-				.setUserName(req.getParameter("userName"))
-				.setUserSex(req.getParameter("userSex"))
-				);
+		userDAO.update(new UserDTO().setUserID(req.getParameter("userID"))
+				.setUserAddress(req.getParameter("userAddress")).setUserPassword(req.getParameter("userPassword"))
+				.setUserPasswordHash(req.getParameter("userPassword")).setUserPhone(req.getParameter("userPhone"))
+				.setUserRating(0).setUserName(req.getParameter("userName")).setUserSex(req.getParameter("userSex")));
 
 		PrintWriter wr = resp.getWriter();
 		wr.println("<script>");

@@ -24,13 +24,13 @@ public class ProductServlet extends HttpServlet {
 
 		ProductDAO productDAO = (ProductDAO) sc.getAttribute("productDAO");
 		int pdID = Integer.parseInt(req.getParameter("pdID"));
-		
+
 		ProductDTO productDTO = productDAO.getSelectOneProduct(pdID);
 
 		resp.setContentType("text/html; charset=utf-8");
-		
+
 		req.setAttribute("product", productDTO);
-		
+
 		RequestDispatcher rd = req.getRequestDispatcher("/jsp/form/ProductForm.jsp");
 		rd.include(req, resp);
 	}

@@ -46,7 +46,7 @@ public class ContextLoaderListener implements ServletContextListener {
 			sc.setAttribute("userDAO", userDAO);
 
 		} catch (Exception e) {
-			
+
 		}
 	}
 

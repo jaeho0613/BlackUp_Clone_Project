@@ -2,6 +2,7 @@
 pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
+
 <head>
   <!-- Web 설정 -->
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -14,9 +15,9 @@ pageEncoding="UTF-8"%>
   <!-- CSS -->
   <link rel="stylesheet" href="/BlackUp_Clone_Project/css/bootstrap.min.css">
   <link rel="stylesheet" href="/BlackUp_Clone_Project/css/custom.css">
-  
+
   <!-- Login CSS -->
-	<link rel="stylesheet" href="/BlackUp_Clone-Project/css/login.css">
+  <link rel="stylesheet" href="/BlackUp_Clone-Project/css/login.css">
 
   <title>LogInForm</title>
 </head>
@@ -47,7 +48,7 @@ pageEncoding="UTF-8"%>
     </div>
     <div class="col-lg-5"></div>
   </div>
-    
+
   <!-- 푸터 영역  -->
   <jsp:include page="../../Footer.jsp"></jsp:include>
 </body>

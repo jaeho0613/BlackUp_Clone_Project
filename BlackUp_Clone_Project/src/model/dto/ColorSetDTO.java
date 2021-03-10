@@ -5,7 +5,7 @@ public class ColorSetDTO {
 	int pdID;
 	String color;
 	String colorCode;
-	
+
 	public String getColorCode() {
 		return colorCode;
 	}

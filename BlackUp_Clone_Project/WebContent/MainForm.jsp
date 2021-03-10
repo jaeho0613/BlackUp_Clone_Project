@@ -85,8 +85,8 @@ uri="http://java.sun.com/jsp/jstl/core"%>
       </div>
     </c:forEach>
     <div class="vbtn d-flex justify-content-center mt-5">
-      <a class="d-flex justify-content-center align-content-center"
-        href="/BlackUp_Clone_Project/main?num=${ num }" class="">View More
+      <a class="d-flex justify-content-center align-content-center" href="/BlackUp_Clone_Project/main?num=${ num }"
+        class="">View More
       </a>
     </div>
   </section>

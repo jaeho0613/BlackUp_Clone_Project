@@ -3,7 +3,7 @@
 
 <footer class="bg-white text-black pt-5 pb-4">
 	<div class="container text-center text-md-left">
-		
+
 		<!-- 상단 사진 -->
 		<div class="row text-center text-md-left">
 			<div>

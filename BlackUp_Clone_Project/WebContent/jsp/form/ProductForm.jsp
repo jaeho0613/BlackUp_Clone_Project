@@ -139,9 +139,9 @@
 			<c:forEach items="${ product.imagePathList }" var="image" begin="1">
 				<img src="${ image.imgPath }" class="img-fluid" alt="..." />
 			</c:forEach>
-			<!-- <img src="https://black-up.kr/web/upload/210224_sb_nr_12pt_made_01.jpg" class="img-fluid" alt="..." /> --> 
-			<!-- <img src="https://black-up.kr/web/upload/210224_sb_nr_12pt_made_02.gif" class="img-fluid" alt="..." /> --> 
-			<!-- <img src="https://black-up.kr/web/upload/210224_sb_nr_12pt_made_03.jpg" class="img-fluid" alt="..." /> --> 
+			<!-- <img src="https://black-up.kr/web/upload/210224_sb_nr_12pt_made_01.jpg" class="img-fluid" alt="..." /> -->
+			<!-- <img src="https://black-up.kr/web/upload/210224_sb_nr_12pt_made_02.gif" class="img-fluid" alt="..." /> -->
+			<!-- <img src="https://black-up.kr/web/upload/210224_sb_nr_12pt_made_03.jpg" class="img-fluid" alt="..." /> -->
 			<!-- <img src="https://black-up.kr/web/upload/210224_sb_nr_12pt_02.jpg" class="img-fluid" alt="..." /> -->
 		</div>
 	</section>
@@ -154,32 +154,32 @@
 					<p>Total : 100</p>
 					<p>5 Start</p>
 					<div class="progress">
-						<div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: ${ product.pdGPA5 * 10 }%"
-							aria-valuemax="100">
+						<div class="progress-bar progress-bar-striped bg-danger" role="progressbar"
+							style="width: ${ product.pdGPA5 * 10 }%" aria-valuemax="100">
 							${ product.pdGPA5 }</div>
 					</div>
 					<p>4 Start</p>
 					<div class="progress">
-						<div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: ${ product.pdGPA4 * 10 }%"
-							aria-valuemax="100">
+						<div class="progress-bar progress-bar-striped bg-danger" role="progressbar"
+							style="width: ${ product.pdGPA4 * 10 }%" aria-valuemax="100">
 							${ product.pdGPA4 }</div>
 					</div>
 					<p>3 Start</p>
 					<div class="progress">
-						<div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: ${ product.pdGPA3 * 10 }%"
-							aria-valuemax="100">
+						<div class="progress-bar progress-bar-striped bg-danger" role="progressbar"
+							style="width: ${ product.pdGPA3 * 10 }%" aria-valuemax="100">
 							${ product.pdGPA3 }</div>
 					</div>
 					<p>2 Start</p>
 					<div class="progress">
-						<div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: ${ product.pdGPA2 * 10 }%"
-							aria-valuemax="100">
+						<div class="progress-bar progress-bar-striped bg-danger" role="progressbar"
+							style="width: ${ product.pdGPA2 * 10 }%" aria-valuemax="100">
 							${ product.pdGPA2 }</div>
 					</div>
 					<p>1 Start</p>
 					<div class="progress">
-						<div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: ${ product.pdGPA1 * 10 }%"
-							aria-valuemax="100">
+						<div class="progress-bar progress-bar-striped bg-danger" role="progressbar"
+							style="width: ${ product.pdGPA1 * 10 }%" aria-valuemax="100">
 							${ product.pdGPA1 }</div>
 					</div>
 				</div>

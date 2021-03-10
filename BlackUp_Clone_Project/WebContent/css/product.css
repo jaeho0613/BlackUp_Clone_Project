@@ -28,7 +28,7 @@ li {
 }
 
 section#product_item {
-    margin-top: 120px;
+  margin-top: 120px;
 }
 
 @media (max-width: 576px) {
