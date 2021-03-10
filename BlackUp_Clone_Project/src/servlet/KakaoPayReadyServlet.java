@@ -9,6 +9,7 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,10 +22,12 @@ import model.dto.KakaoPayReadDTO;
 
 @SuppressWarnings("serial")
 @WebServlet("/payment/ready")
-public class KakaoPayServlet extends HttpServlet{
+public class KakaoPayReadyServlet extends HttpServlet{
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		ServletContext sc = this.getServletContext();
+		
 		System.out.println("ready GET");
 		Gson gson = new Gson();
 		URL url = new URL("https://kapi.kakao.com/v1/payment/ready");
@@ -59,6 +62,7 @@ public class KakaoPayServlet extends HttpServlet{
 		
 		KakaoPayReadDTO ready = gson.fromJson(in, KakaoPayReadDTO.class);
 		System.out.println(ready.getNext_redirect_pc_url());
+		sc.setAttribute("ready", ready);
 		
 		PrintWriter wr = resp.getWriter();
 		wr.println("<script>");
@@ -66,10 +70,5 @@ public class KakaoPayServlet extends HttpServlet{
 		wr.println("</script>");
 		wr.close();
 		
-	}
-	
-	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		System.out.println("ready POST");
 	}
 }
