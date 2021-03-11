@@ -3,15 +3,15 @@
 
 <footer class="bg-white text-black pt-5 pb-4">
 	<div class="container text-center text-md-left">
-
+s
 		<!-- 상단 사진 -->
 		<div class="row text-center text-md-left">
 			<div>
 				<ul>
 					<li>
-						<img src="https://black-up.kr/web/upload/yangji_pc_crumb/yg_bn_7_01.jpg" width="25%">
-						<img src="https://black-up.kr/web/upload/yangji_pc_crumb/yg_bn_7_02.jpg" width="25%">
-						<img src="https://black-up.kr/web/upload/yangji_pc_crumb/yg_bn_7_03.jpg" width="25%">
+						<img src="https://black-up.kr/web/upload/yangji_pc_crumb/yg_bn_7_01.jpg" width="30%">
+						<img src="https://black-up.kr/web/upload/yangji_pc_crumb/yg_bn_7_02.jpg" width="30%">
+						<img src="https://black-up.kr/web/upload/yangji_pc_crumb/yg_bn_7_03.jpg" width="30%">
 					</li>
 				</ul>
 			</div>
