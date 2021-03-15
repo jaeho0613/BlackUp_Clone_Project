@@ -543,7 +543,7 @@ insert into colorset  values(48,'화이트','#FFFFFF');
 insert into sizeset   values(48,'S');
 insert into sizeset   values(48,'M');
 insert into category  values(48,'pants','면바지');
-insert into imagepath values(48,'hhttps://black-up.kr/web/product/small/202101/165b40dbff5bbc7027c9685d57a55406.webp','아무거나(아직사용X)');
+insert into imagepath values(48,'//black-up.kr/web/product/small/202101/165b40dbff5bbc7027c9685d57a55406.webp','아무거나(아직사용X)');
 insert into imagepath values(48,'https://black-up.kr/web/upload/210115_ya_jn9pt_01.jpg','아무거나(아직사용X)');
 insert into imagepath values(48,'https://black-up.kr/web/upload/210115_ya_jn9pt_02.jpg','아무거나(아직사용X)');
 insert into imagepath values(48,'https://black-up.kr/web/upload/210115_ya_jn9pt_05.jpg','아무거나(아직사용X)');

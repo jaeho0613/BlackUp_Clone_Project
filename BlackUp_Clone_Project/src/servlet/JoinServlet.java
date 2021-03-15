@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
@@ -28,6 +29,7 @@ public class JoinServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setCharacterEncoding("UTF-8");
+		resp.setContentType("text/html; charset=utf-8");
 
 		try {
 			ServletContext sc = req.getServletContext();
@@ -38,9 +40,12 @@ public class JoinServlet extends HttpServlet {
 					.setUserPasswordHash(req.getParameter("userPassword")).setUserID(req.getParameter("userID"))
 					.setUserSex(req.getParameter("userGender")).setUserPhone(req.getParameter("userPhone")));
 
-			resp.sendRedirect("main");
-
-// 재호한테 예외처리 물어보기! (주소입력!)
+			PrintWriter wr = resp.getWriter();
+			wr.println("<script>");
+			wr.println("alert('회원가입 완료!');");
+			wr.println("location.href = 'main'");
+			wr.println("</script>");
+			wr.close();
 
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -87,7 +87,7 @@
 						<c:if test="${ vs2.last && (vs2.index != (vs.index * 5 + 4)) }">
 							<c:forEach begin="0" end="${ ((vs.index * 5 + 4) - vs2.index) - 1 }">
 								<div class="card border-0">
-									<img src="http://via.placeholder.com/600x600" class="card-img-top" alt="..." />
+									<img src="http://via.placeholder.com/264x357" class="card-img-top" alt="..." />
 									<div class="card-body">
 										<!-- 상품 정보 -->
 										<p class="text-center">상품 준비중...</p>
