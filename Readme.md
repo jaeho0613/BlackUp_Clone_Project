@@ -9,7 +9,10 @@ Git 이용하여 팀 프로젝트로 진행했습니다.
 
 ## 주요 기능
 - Kakao API Pay 결제 기능
+  - [KakaoPayApprovalServlet.java](https://tinyurl.com/yjzt578u)
+  - [KakaoPayReadyServlet.java](https://tinyurl.com/yjmum43g)
 - Juso API 기능
+  - [JoinServlet.java](https://tinyurl.com/yfj3l7jw)
 - MVC Model2 적용
 - DB를 이용한 회원가입, 상품 출력 기능
 
