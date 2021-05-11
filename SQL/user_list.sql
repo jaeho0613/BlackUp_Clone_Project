@@ -8,3 +8,5 @@ insert into user(userID,userRating,userPassword,userPasswordHash,userName,userAd
 values('mossu','4','123','123','김혜수','서울 성동구 성수일로4길26 1005호','01033333333','male');
 
 SELECT * FROM blackup.user;
+
+select * from Product;
