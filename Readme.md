@@ -1,7 +1,6 @@
 # BlackUp Project [JSP]
-<a href="https://black-up.kr/">
-  <img src="https://m.black-up.kr/SkinImg/img/logo.png">
-</a>
+[![cover](https://m.black-up.kr/SkinImg/img/logo.png)](https://www.youtube.com/watch?v=cFAiqodO158&t=2s)
+**(사진 클릭 시 유튜브 영상)**
 
 ## 소개
 JSP를 이용한 쇼핑몰 클론 프로젝트 입니다.  
